@@ -1181,6 +1181,29 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   max-width: 360px;
 }
 
+.footer__social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.65);
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer__social a:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
 .footer__links {
   display: grid;
   grid-template-columns: 1fr 1fr;
