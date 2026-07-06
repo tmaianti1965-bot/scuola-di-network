@@ -1,170 +1,45 @@
-# Tito Maianti — Scuola di Network / Autonomia Digitale
+# CLAUDE.md
 
-## Identità del brand
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**Nome sito:** ScuolaDiNetwork.com  
-**Tagline:** Apriamo il computer. Facciamo insieme.  
-**Posizionamento:** Consulente marketing con 30 anni di esperienza nel network marketing e nel direct response. Non vende corsi — lavora fianco a fianco con il cliente, schermo condiviso, mouse in mano.  
-**Tono:** Autorevole ma diretto. Mai accademico. Mai da guru. La voce di chi ha già fatto tutto sul campo e ora lo insegna senza filtri.
+## Progetto
 
----
+ScuolaDiNetwork.com — sito statico (HTML + CSS + JS vanilla), hostato su GitHub Pages. Dominio su Hostinger. Nessun build step, bundler o package manager.
 
-## Brand Identity visiva
+**Deployment:** `git push origin main` → GitHub Pages pubblica automaticamente.  
+**Preview locale:** `python -m http.server 8080` oppure apri `index.html` direttamente.
 
-### Font
-- **Titoli:** Playfair Display (Google Fonts) — elegante, autorevole, italiano
-- **Testo corpo:** DM Sans (Google Fonts) — pulito, leggibile, moderno
-- **Accenti / numeri:** DM Mono — per dati, prezzi, statistiche
+## Stack
 
-### Colori
-```
---color-primary:     #1B2B5E   /* Blu notte — autorevolezza */
---color-accent:      #C9A84C   /* Oro — 30 anni di expertise */
---color-dark:        #0F1A3A   /* Blu profondo — sfondo sezioni scure */
---color-light:       #F8F6F1   /* Crema calda — sfondo sezioni chiare */
---color-text:        #1A1A1A   /* Quasi nero */
---color-text-muted:  #5C6070   /* Grigio medio */
---color-red-old:     #C0392B   /* Rosso attuale — da usare solo per elementi negativi (le 3 dipendenze) */
-```
+- HTML / CSS / JS puro (no framework, no librerie)
+- GitHub Pages (hosting)
+- MailerLite (email funnel — in integrazione)
+- Meta Pixel + GTM (tracking)
+- n8n (Conversions API server-side — fase 2)
 
-### Stile visivo
-- Layout: ampio respiro, sezioni alternate chiaro/scuro
-- Immagini: foto reali di Tito, niente stock generico
-- Icone: minimal, line-style
-- Angoli: nessun border-radius esagerato — max 8px
-- Niente gradients colorati — solo overlay scuri sulle foto
+## Architettura
 
----
+- `index.html` — unica pagina principale, single-scroll, 10 sezioni
+- `thank-you.html` — pagina post-form (da creare), spara evento Meta `Lead`
+- Pagine pianificate ma non ancora create (vedi roadmap in `PRD-ScuolaDiNetwork.md`): `titosofia.html`, `community.html`, `percorsi.html`, `corso-lead-ad.html`, `contatti.html`, `grazie.html`, `landing-ads.html`
+- `css/style.css` — tutto il CSS, organizzato per sezione con `/* === NOME === */`
+- `js/main.js` — tutto il JS, organizzato in IIFE indipendenti
+- Logo e immagini hero nella root (non in `img/`) — percorsi sensibili, non spostare
 
-## Struttura del sito (homepage)
+**CSS:** usa sempre le variabili in `:root`, mai valori hardcoded.  
+**JS pattern attivi:** nav scroll, hamburger, smooth scroll, IntersectionObserver fade-in, YouTube facade, form validation.
 
-### 1. HERO
-- Headline principale: **"Apriamo il computer. Facciamo insieme."**
-- Subheadline: "Niente corsi da guardare. Mi siedo accanto a te, condivido il tuo schermo e costruiamo il tuo sistema di contatti insieme."
-- CTA primaria: **"Entra gratis nella community"** → link Skool
-- CTA secondaria: **"Guarda come funziona"** → ancora al video
-- Sfondo: foto Tito in ufficio, overlay blu scuro
+## Regole hard
 
-### 2. IL PROBLEMA (sezione scura)
-- Titolo: "Il problema dei networker oggi"
-- Le 3 dipendenze (mantenere il rosso qui — è l'unico uso del colore aggressivo):
-  - Dipendente dall'upline
-  - Dipendente dalla lista nomi
-  - Dipendente dalla fortuna
+- Mai usare valori CSS hardcoded — solo variabili `var(--*)` definite in `:root`
+- Mai spostare i file immagine dalla root senza aggiornare tutti i riferimenti HTML
+- GTM snippet (`GTM-WN82N9PX`) presente in `<head>` e `<noscript>` su ogni pagina — non rimuovere. ID reale già inserito su `index.html`; Meta Pixel ID ancora da inserire (vedi `agent_docs/funnel.md`)
+- Il form contatti è il widget embed MailerLite (Form 1) in `index.html` — non modificare a mano i campi lì dentro, si gestiscono dal builder MailerLite (vedi `agent_docs/funnel.md`)
 
-### 3. VIDEO + PROMESSA
-- Video YouTube integrato
-- Testo affiancato: la promessa differenziante
+## Riferimenti
 
-### 4. CHI È TITO (sezione crema)
-- Foto professionale
-- Bio sintetica: 30 anni, 2 aziende scalate, reinventato in Francia senza conoscenze, oggi insegna la stessa indipendenza
-- NON una lista di titoli — una storia in 4 righe
-
-### 5. COMMUNITY SKOOL (sezione blu notte)
-- Titolo: "Entra nella community gratuita"
-- 3 benefit dell'entrare
-- CTA: "Entra gratis ora" → link Skool
-
-### 6. I PERCORSI (prezzi)
-- I 3 livelli: Partenza Rapida / Acceleratore Pro / Partnership Elite
-- Prima dei prezzi: una frase di posizionamento che scalda
-
-### 7. COSA SVILUPPERAI
-- I 7 punti (già presenti nel sito attuale — sono buoni)
-
-### 8. LA SCUOLA NON È PER TE
-- Le 6 card negative (già presenti — funzionano bene)
-
-### 9. TESTIMONIAL
-- Recensioni Google (già presenti)
-
-### 10. CTA FINALE + FORM
-- Titolo meno frenante: "Parliamo — raccontami la tua situazione"
-- Form semplificato: Nome, Email, Tel, Situazione
-- Rimuovere la mappa
-
----
-
-## Copy — Regole fondamentali
-
-- **Stile:** Direct response con sensibilità italiana. Elegante, mai aggressivo.
-- **Framework Schwartz:** Il pubblico è a livello 3 (Solution Aware) — sa che esistono strumenti digitali, non conosce ancora Tito
-- **Mai usare:** "rivoluzionario", "incredibile", "il segreto che nessuno ti dice"
-- **Sempre usare:** verbi concreti, numeri specifici, la storia vera di Tito
-- **CTA:** Mai "Acquista ora" — sempre "Entra", "Scopri", "Parliamo", "Inizia"
-- **Frase chiave del brand:** "Mi siedo accanto a te" — usarla come ancore nel testo
-
----
-
-## Target
-
-**Pubblico primario:** Networker con 1-5 anni di esperienza, delusi dai metodi tradizionali (lista nomi, telefonate a freddo), cercano un sistema digitale ma non sanno da dove iniziare.
-
-**Pubblico secondario:** Chi ha già provato corsi online e non ha ottenuto risultati — diffidenti, da conquistare con credibilità e dimostrazione pratica.
-
-**Livello consapevolezza Schwartz:** 3 — Solution Aware  
-**Età:** 30-55  
-**Sesso:** misto, leggera prevalenza femminile  
-**Pain principale:** Dipendenza dall'upline, lista nomi esaurita, risultati casuali
-
----
-
-## Funnel collegato
-
-```
-Sito (traffico freddo)
-    ↓
-CTA "Entra gratis" → Skool Community Free
-    ↓
-Nurture nella community (contenuti, live, Q&A)
-    ↓
-Skool Paid → Autonomia Digitale (€397-897/mese)
-    ↓
-Coaching 1:1 (pacchetti premium)
-```
-
----
-
-## Integrazioni tecniche
-
-- **Analytics:** Google Tag Manager (snippet nell'header, gestisce tutto)
-- **Pixel:** Meta Pixel via GTM
-- **Video:** YouTube embed (no autoplay)
-- **Form:** Form nativo HTML → collegare a CRM o email
-- **Community:** Link esterno a Skool
-- **Hosting:** GitHub Pages (sito statico)
-- **Dominio:** scuoladinetwork.com (rinnovare solo dominio su Hostinger, puntare a GitHub Pages)
-
----
-
-## File e cartelle del progetto
-
-```
-ScuolaDiNetwork/
-├── CLAUDE.md              ← questo file
-├── index.html             ← homepage
-├── titosofia.html         ← pagina Titosofia
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── img/
-│   ├── tito-hero.jpg
-│   ├── tito-profilo.jpg
-│   └── logo.png
-└── README.md
-```
-
----
-
-## Note per Claude Code
-
-Quando lavori su questo progetto:
-1. Leggi sempre questo file prima di scrivere qualsiasi codice
-2. Usa i font da Google Fonts (Playfair Display + DM Sans)
-3. Mantieni la palette colori definita sopra
-4. Il sito è statico — niente PHP, niente database
-5. GTM va inserito nell'`<head>` e prima del `</body>` di ogni pagina
-6. Ottimizza per mobile-first
-7. Il tono del copy è autorevole e diretto — mai generico
+- Brand, palette, font, copy, vincoli visivi → `agent_docs/brand.md`
+- Funnel lead, tracking Meta, TODO tecnici → `agent_docs/funnel.md`
+- Link fissi (Skool, social) → `agent_docs/brand.md`
+- Visione, target, funnel completo, pricing coaching, roadmap e pagine da costruire → `PRD-ScuolaDiNetwork.md`
+- Credenziali (API key MailerLite, Group ID, GTM/Pixel ID) → `.claude/secrets.md` (locale, mai committato — non inserire mai valori reali qui)
