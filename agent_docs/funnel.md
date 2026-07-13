@@ -18,7 +18,7 @@ MailerLite webhook → n8n → Meta Conversions API  ← server-side
 
 ## Tracking — stato attuale
 
-- **GTM ID:** `GTM-WN82N9PX` inserito in `index.html` (`<head>` e `<noscript>`) — container esistente, da ripulire/verificare dentro l'interfaccia GTM prima di configurare i tag
+- **GTM ID:** `GTM-WN82N9PX` — caricato SOLO dopo consenso cookie (Consent Mode v2 default `denied` + `window.loadGTM()`; niente `<noscript>`). Container esistente, da ripulire/verificare nell'interfaccia GTM. **Il Meta Pixel va aggiunto come tag DENTRO GTM** (così eredita il gating del consenso) oppure gated allo stesso modo lato pagina
 - **Meta Pixel ID:** da inserire — dataset "Tito Ottorino Maianti" su Meta Business (ID: `1515308506137464` in `.claude/secrets.md`)
 - **Evento da tracciare:** `Lead` — scatta alla visualizzazione di `thank-you.html`
 

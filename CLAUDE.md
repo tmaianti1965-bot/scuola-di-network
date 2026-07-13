@@ -33,7 +33,9 @@ ScuolaDiNetwork.com — sito statico (HTML + CSS + JS vanilla), hostato su GitHu
 
 - Mai usare valori CSS hardcoded — solo variabili `var(--*)` definite in `:root`
 - Mai spostare i file immagine dalla root senza aggiornare tutti i riferimenti HTML
-- GTM snippet (`GTM-WN82N9PX`) presente in `<head>` e `<noscript>` su ogni pagina — non rimuovere. ID reale già inserito su `index.html`; Meta Pixel ID ancora da inserire (vedi `agent_docs/funnel.md`)
+- GTM (`GTM-WN82N9PX`) NON parte al load: è gated dietro consenso cookie (Consent Mode v2 default `denied` in `<head>`, caricato da `window.loadGTM()` solo dopo "Accetta"). Niente `<noscript>` GTM (bypasserebbe il consenso). Meta Pixel andrà anch'esso gated allo stesso modo (vedi `agent_docs/funnel.md`)
+- Cookie banner GDPR: markup `#cookieBanner` prima di `</body>` su ogni pagina + `js/cookie-consent.js`; scelta in `localStorage['cookie-consent']`; link "Gestisci cookie" (`[data-cookie="manage"]`) lo riapre
+- SICUREZZA: la API key privata MailerLite e ogni segreto vivono SOLO in `.claude/secrets.md` (git-ignored). Mai inserirli nel frontend o in file tracciati. Il form usa il widget embed pubblico, non la chiave
 - Il form contatti è il widget embed MailerLite (Form 1) in `index.html` — non modificare a mano i campi lì dentro, si gestiscono dal builder MailerLite (vedi `agent_docs/funnel.md`)
 
 ## Riferimenti

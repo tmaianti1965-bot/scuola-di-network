@@ -1391,3 +1391,97 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ============================================================
+   COOKIE BANNER (GDPR)
+============================================================ */
+.cookie-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--color-dark);
+  color: var(--color-light);
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  display: none;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cookie-banner.is-visible { display: flex; }
+
+.cookie-banner__text {
+  flex: 1 1 340px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-light);
+  margin: 0;
+}
+
+.cookie-banner__text a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.cookie-banner__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex: 0 0 auto;
+}
+
+.cookie-banner__btn {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid var(--color-accent);
+}
+
+.cookie-banner__btn--accept {
+  background: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.cookie-banner__btn--accept:hover { filter: brightness(0.92); }
+
+.cookie-banner__btn--reject {
+  background: transparent;
+  color: var(--color-light);
+}
+
+.cookie-banner__btn--reject:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* Link "Gestisci cookie" nel footer */
+.cookie-manage {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.cookie-manage:hover { text-decoration: underline; }
+
+@media (max-width: 640px) {
+  .cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .cookie-banner__actions { width: 100%; }
+  .cookie-banner__btn { flex: 1; }
+}
