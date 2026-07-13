@@ -31,7 +31,7 @@ Redirect → lead-magnet.html (template compilabile, consegna immediata)
 
 ## Lead magnet — popup
 
-- **Contenuto:** `lead-magnet.html` — template compilabile "Il copy della tua prima Lead Ad in 10 minuti" (4 blocchi: aggancio, qualificazione, prova, CTA).
+- **Contenuto:** `lead-magnet.html` — framework compilabile "Da zero a prima campagna in un weekend", in 3 fasi: copy (4 blocchi: aggancio, qualificazione, prova, CTA), creatività (checklist + 2 format pronti), lancio (checklist budget/targeting/monitoraggio). CTA finale doppia: form contatti + link community gratuita Skool.
 - **Popup:** markup in `index.html` (`#lmPopup`), stile in `css/style.css` (blocco "POPUP LEAD MAGNET"), logica in `js/lead-magnet-popup.js` — compare 9s dopo il caricamento, una sola volta per sessione (`sessionStorage`), chiudibile con X/click sfondo/Esc.
 - **Form MailerLite:** "Lead Magnet - Template Lead Ad" (embedded form, ID `192865015019078856`, shortcode `AZj25o`), gruppo dedicato "Lead Magnet - Template Lead Ad" (separato dal gruppo del form "Parliamo"), **singolo opt-in**, redirect custom a `https://scuoladinetwork.com/lead-magnet.html`. Embed nel popup: `<div class="ml-embedded" data-form="AZj25o"></div>` (si appoggia allo script universale MailerLite già presente in `index.html`).
 - Verificato: il widget si carica nel popup, punta al form corretto (`action` con ID form coincidente), nessun errore console. Non è stata sottoscritta un'email di test per non sporcare la lista.

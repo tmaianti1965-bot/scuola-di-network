@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>Il copy della tua prima Lead Ad in 10 minuti — Scuola di Network</title>
+  <title>Da zero a prima campagna in un weekend — Scuola di Network</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,16 +16,30 @@
     .lm__eyebrow { font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; margin-bottom: 0.8rem; }
     .lm h1 { font-family: var(--font-title); font-size: 2.1rem; color: var(--color-primary); line-height: 1.25; margin-bottom: 1rem; }
     .lm__intro { color: var(--color-text-muted); font-size: 1.05rem; margin-bottom: 2.8rem; }
-    .lm__step { border-left: 3px solid var(--color-accent); padding: 0.2rem 0 0.2rem 1.6rem; margin-bottom: 2.6rem; }
-    .lm__step h2 { font-family: var(--font-title); font-size: 1.3rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+    .lm__phase { margin-bottom: 3.5rem; }
+    .lm__phase-label { font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; margin-bottom: 0.4rem; }
+    .lm__phase h2 { font-family: var(--font-title); font-size: 1.6rem; color: var(--color-primary); margin-bottom: 0.6rem; }
+    .lm__phase-intro { color: var(--color-text-muted); font-size: 0.98rem; margin-bottom: 1.6rem; }
+    .lm__step { border-left: 3px solid var(--color-accent); padding: 0.2rem 0 0.2rem 1.6rem; margin-bottom: 2rem; }
+    .lm__step h3 { font-family: var(--font-title); font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.5rem; }
     .lm__step .why { color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1rem; }
     .lm__fill { border: 1.5px dashed var(--color-accent); border-radius: var(--radius); padding: 1rem 1.2rem; font-family: var(--font-mono); color: var(--color-text); background: var(--color-light); min-height: 2.2rem; margin-bottom: 0.8rem; }
     .lm__example { font-size: 0.92rem; color: var(--color-text-muted); font-style: italic; }
     .lm__example strong { color: var(--color-text); font-style: normal; }
-    .lm__result { background: var(--color-dark); color: var(--color-white); border-radius: var(--radius); padding: 2rem; margin-top: 3rem; }
+    .lm__checklist { list-style: none; padding: 0; margin: 0 0 1.6rem; }
+    .lm__checklist li { padding: 0.7rem 0 0.7rem 2rem; border-bottom: 1px solid rgba(27,43,94,0.1); color: var(--color-text); font-size: 0.95rem; position: relative; }
+    .lm__checklist li::before { content: "✓"; position: absolute; left: 0; color: var(--color-accent); font-weight: 700; }
+    .lm__formats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.6rem; }
+    .lm__format { background: var(--color-light); border-radius: var(--radius); padding: 1.2rem; }
+    .lm__format h3 { font-family: var(--font-title); font-size: 1rem; color: var(--color-primary); margin-bottom: 0.5rem; }
+    .lm__format p { color: var(--color-text-muted); font-size: 0.9rem; }
+    .lm__result { background: var(--color-dark); color: var(--color-white); border-radius: var(--radius); padding: 2rem; margin-top: 1rem; }
     .lm__result h2 { font-family: var(--font-title); color: var(--color-accent); font-size: 1.3rem; margin-bottom: 1rem; }
     .lm__result p { color: var(--color-light); }
     .lm__cta { text-align: center; margin-top: 3rem; }
+    @media (max-width: 640px) {
+      .lm__formats { grid-template-columns: 1fr; }
+    }
     @media print {
       .nav, .lm__cta { display: none; }
       .lm { padding-top: 1rem; }
@@ -45,52 +59,98 @@
 
   <main class="lm">
     <p class="lm__eyebrow">Eccolo, come promesso</p>
-    <h1>Il copy della tua prima Lead Ad in 10 minuti</h1>
+    <h1>Da zero a prima campagna in un weekend</h1>
     <p class="lm__intro">
-      Questo è il template gratuito che hai richiesto. Non un altro PDF da leggere e dimenticare:
-      riempi i 4 spazi qui sotto con la tua situazione e alla fine hai il copy pronto da incollare
-      nel gestore inserzioni Meta.
+      Non un altro PDF da leggere e dimenticare. Il framework che uso per lanciare una Lead Ad
+      da zero, in 3 fasi: il copy, la creatività, il lancio. Segui l'ordine, riempi gli spazi,
+      e sabato sera la tua prima campagna è online.
     </p>
 
-    <div class="lm__step">
-      <h2>1. L'aggancio</h2>
-      <p class="why">La prima riga decide se chi scorre si ferma o no. Deve nominare un problema che il tuo lead riconosce in mezzo secondo — non un beneficio generico.</p>
-      <div class="lm__fill">Ti è mai capitato di ______________ (il problema specifico, non "vuoi guadagnare di più")?</div>
-      <p class="lm__example"><strong>Esempio:</strong> "Ti è mai capitato di finire la lista di amici e parenti da contattare e non sapere più a chi rivolgerti?"</p>
+    <div class="lm__phase">
+      <p class="lm__phase-label">Fase 1 / 3</p>
+      <h2>Il copy</h2>
+      <p class="lm__phase-intro">4 blocchi da riempire con la tua situazione. Alla fine hai il testo pronto da incollare nel gestore inserzioni Meta.</p>
+
+      <div class="lm__step">
+        <h3>1. L'aggancio</h3>
+        <p class="why">La prima riga decide se chi scorre si ferma o no. Deve nominare un problema che il tuo lead riconosce in mezzo secondo — non un beneficio generico.</p>
+        <div class="lm__fill">Ti è mai capitato di ______________ (il problema specifico, non "vuoi guadagnare di più")?</div>
+        <p class="lm__example"><strong>Esempio:</strong> "Ti è mai capitato di finire la lista di amici e parenti da contattare e non sapere più a chi rivolgerti?"</p>
+      </div>
+
+      <div class="lm__step">
+        <h3>2. La qualificazione</h3>
+        <p class="why">Questa riga allontana chi non fa per te. Un form breve raccoglie tutti; questa frase filtra solo chi ha già il problema che risolvi.</p>
+        <div class="lm__fill">Questo è per chi ______________ (condizione che rende il lead adatto) e non per chi ______________ (chi escludi volentieri).</div>
+        <p class="lm__example"><strong>Esempio:</strong> "Questo è per chi è già nel network marketing da almeno 6 mesi e non per chi cerca uno schema per arricchirsi in una settimana."</p>
+      </div>
+
+      <div class="lm__step">
+        <h3>3. La prova</h3>
+        <p class="why">Non serve un caso studio complesso: basta una frase concreta che dimostri che il metodo funziona per qualcuno come loro.</p>
+        <div class="lm__fill">______________ (nome o "un networker come te") ha ottenuto ______________ (risultato specifico, con numero) in ______________ (tempo).</div>
+        <p class="lm__example"><strong>Esempio:</strong> "Marco, sponsor da 3 anni, ha portato 12 lead qualificati in 2 settimane senza toccare la sua lista contatti."</p>
+      </div>
+
+      <div class="lm__step">
+        <h3>4. La call to action</h3>
+        <p class="why">Un'azione sola, a basso attrito. Chiedi il primo passo, non l'impegno finale.</p>
+        <div class="lm__fill">______________ (verbo d'azione: scopri / prenota / scarica) ______________ (cosa ottiene subito, in 3-5 parole).</div>
+        <p class="lm__example"><strong>Esempio:</strong> "Scopri il metodo in una call gratuita di 20 minuti."</p>
+      </div>
+
+      <div class="lm__result">
+        <h2>Il tuo copy, tutto insieme</h2>
+        <p>
+          Quando hai riempito i 4 spazi, incollali in fila nell'ordine sopra: aggancio, qualificazione,
+          prova, call to action. Hai il testo della tua prima inserzione.
+        </p>
+      </div>
     </div>
 
-    <div class="lm__step">
-      <h2>2. La qualificazione</h2>
-      <p class="why">Questa riga allontana chi non fa per te. Un form breve raccoglie tutti; questa frase filtra solo chi ha già il problema che risolvi.</p>
-      <div class="lm__fill">Questo è per chi ______________ (condizione che rende il lead adatto) e non per chi ______________ (chi escludi volentieri).</div>
-      <p class="lm__example"><strong>Esempio:</strong> "Questo è per chi è già nel network marketing da almeno 6 mesi e non per chi cerca uno schema per arricchirsi in una settimana."</p>
+    <div class="lm__phase">
+      <p class="lm__phase-label">Fase 2 / 3</p>
+      <h2>La creatività</h2>
+      <p class="lm__phase-intro">Il copy senza un'immagine o un video che si ferma nello scroll non parte da nessuna parte. Non serve un videomaker: serve seguire questa checklist.</p>
+
+      <ul class="lm__checklist">
+        <li>Il problema è visibile in 1 secondo — non serve leggere la caption per capire di cosa parli</li>
+        <li>Niente foto stock con gente che sorride al laptop — si riconoscono a colpo d'occhio e spengono la fiducia</li>
+        <li>Il testo sull'immagine si legge anche con il telefono in modalità silenziosa, senza audio</li>
+        <li>Un solo messaggio per creatività — se stai spiegando due cose, dividile in due inserzioni</li>
+      </ul>
+
+      <div class="lm__formats">
+        <div class="lm__format">
+          <h3>Formato "Screenshot + freccia"</h3>
+          <p>Uno screenshot reale (risultato, messaggio, dato) con una freccia disegnata sopra che indica il punto chiave. Zero editing, massima credibilità — è chiaramente vero perché non è patinato.</p>
+        </div>
+        <div class="lm__format">
+          <h3>Formato "Selfie da telefono"</h3>
+          <p>30 secondi, tu che parli in camera fissa, luce naturale. Dici l'aggancio della Fase 1 nei primi 3 secondi. Nessun montaggio: l'imperfezione è quello che lo fa sembrare autentico, non un'ads.</p>
+        </div>
+      </div>
     </div>
 
-    <div class="lm__step">
-      <h2>3. La prova</h2>
-      <p class="why">Non serve un caso studio complesso: basta una frase concreta che dimostri che il metodo funziona per qualcuno come loro.</p>
-      <div class="lm__fill">______________ (nome o "un networker come te") ha ottenuto ______________ (risultato specifico, con numero) in ______________ (tempo).</div>
-      <p class="lm__example"><strong>Esempio:</strong> "Marco, sponsor da 3 anni, ha portato 12 lead qualificati in 2 settimane senza toccare la sua lista contatti."</p>
-    </div>
+    <div class="lm__phase">
+      <p class="lm__phase-label">Fase 3 / 3</p>
+      <h2>Il lancio</h2>
+      <p class="lm__phase-intro">Copy pronto, creatività pronta. Prima di pubblicare, controlla questi punti.</p>
 
-    <div class="lm__step">
-      <h2>4. La call to action</h2>
-      <p class="why">Un'azione sola, a basso attrito. Chiedi il primo passo, non l'impegno finale.</p>
-      <div class="lm__fill">______________ (verbo d'azione: scopri / prenota / scarica) ______________ (cosa ottiene subito, in 3-5 parole).</div>
-      <p class="lm__example"><strong>Esempio:</strong> "Scopri il metodo in una call gratuita di 20 minuti."</p>
-    </div>
-
-    <div class="lm__result">
-      <h2>Il tuo copy, tutto insieme</h2>
-      <p>
-        Quando hai riempito i 4 spazi, incollali in fila nell'ordine sopra: aggancio, qualificazione,
-        prova, call to action. Hai il testo della tua prima inserzione — pronto da testare con un
-        budget minimo prima di scalare.
-      </p>
+      <ul class="lm__checklist">
+        <li>Budget di partenza: 5-10€ al giorno, non di più — stai testando, non scalando</li>
+        <li>Targeting semplice: età e zona geografica coerenti col tuo mercato, niente interessi troppo di nicchia che restringono la platea</li>
+        <li>Nelle prime 24h controlla solo una cosa: il costo per click. Se è molto più alto della media del tuo settore, il problema è quasi sempre nella creatività, non nel copy</li>
+        <li>Non toccare la campagna prima di 48-72h — i dati nelle prime ore sono ancora instabili</li>
+      </ul>
     </div>
 
     <div class="lm__cta">
-      <a href="index.html#contatti" class="btn btn--gold btn--lg">Vuoi che lo scriva insieme a te? Parliamone</a>
+      <a href="index.html#contatti" class="btn btn--gold btn--lg">Vuoi lanciarla insieme a me? Parliamone</a>
+      <p style="margin-top: 1.2rem;">
+        Oppure <a href="https://www.skool.com/scuola-di-network-2283" target="_blank" rel="noopener">entra gratis nella community</a>
+        e confrontati con altri networker che stanno facendo lo stesso percorso.
+      </p>
     </div>
   </main>
 
