@@ -21,6 +21,7 @@ ScuolaDiNetwork.com — sito statico (HTML + CSS + JS vanilla), hostato su GitHu
 
 - `index.html` — unica pagina principale, single-scroll, 10 sezioni
 - `thank-you.html` — pagina post-form (da creare), spara evento Meta `Lead`
+- `lead-magnet.html` — template compilabile "Il copy della tua prima Lead Ad in 10 minuti", pagina di consegna del lead magnet dopo iscrizione via popup
 - Pagine pianificate ma non ancora create (vedi roadmap in `PRD-ScuolaDiNetwork.md`): `titosofia.html`, `community.html`, `percorsi.html`, `corso-lead-ad.html`, `contatti.html`, `grazie.html`, `landing-ads.html`
 - `css/style.css` — tutto il CSS, organizzato per sezione con `/* === NOME === */`
 - `js/main.js` — tutto il JS, organizzato in IIFE indipendenti
@@ -37,6 +38,7 @@ ScuolaDiNetwork.com — sito statico (HTML + CSS + JS vanilla), hostato su GitHu
 - Cookie banner GDPR: markup `#cookieBanner` prima di `</body>` su ogni pagina + `js/cookie-consent.js`; scelta in `localStorage['cookie-consent']`; link "Gestisci cookie" (`[data-cookie="manage"]`) lo riapre
 - SICUREZZA: la API key privata MailerLite e ogni segreto vivono SOLO in `.claude/secrets.md` (git-ignored). Mai inserirli nel frontend o in file tracciati. Il form usa il widget embed pubblico, non la chiave
 - Il form contatti è il widget embed MailerLite (Form 1) in `index.html` — non modificare a mano i campi lì dentro, si gestiscono dal builder MailerLite (vedi `agent_docs/funnel.md`)
+- Popup lead magnet (`#lmPopup` in `index.html`, `js/lead-magnet-popup.js`): compare 9s dopo il load, 1x/sessione (`sessionStorage['lm-popup-shown']`). Contiene il widget embed MailerLite del form dedicato "Lead Magnet - Template Lead Ad" (gruppo separato da "Parliamo", singolo opt-in, redirect a `lead-magnet.html`) — non modificare i campi del widget a mano, si gestiscono dal builder MailerLite
 
 ## Riferimenti
 
