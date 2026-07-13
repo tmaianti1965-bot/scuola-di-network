@@ -25,7 +25,21 @@
       })(window,document,'script','dataLayer','GTM-WN82N9PX');
     };
 
-    // Aggiorna lo stato di consenso e, se concesso, carica GTM
+    // Carica il Meta Pixel (una sola volta) — solo dopo il consenso
+    window.loadPixel = function () {
+      if (window.__pixelLoaded) return;
+      window.__pixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1515308506137464');
+      fbq('track', 'PageView');
+      if (window.ML_TRACK_LEAD) { fbq('track', 'Lead'); }
+    };
+
+    // Aggiorna lo stato di consenso e, se concesso, carica GTM + Pixel
     window.gtagConsentUpdate = function (state) {
       var granted = state === 'granted';
       gtag('consent', 'update', {
@@ -34,7 +48,7 @@
         ad_user_data: granted ? 'granted' : 'denied',
         ad_personalization: granted ? 'granted' : 'denied'
       });
-      if (granted) window.loadGTM();
+      if (granted) { window.loadGTM(); window.loadPixel(); }
     };
 
     // Se l'utente ha già acconsentito in una visita precedente, applica subito

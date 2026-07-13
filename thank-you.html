@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+  <!-- Questa è la pagina di conversione: spara l'evento Lead quando il Pixel si carica -->
+  <script>window.ML_TRACK_LEAD = true;</script>
+
   <!-- Consent Mode v2 + caricamento condizionato di GTM (GDPR) -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -23,6 +26,19 @@
       })(window,document,'script','dataLayer','GTM-WN82N9PX');
     };
 
+    window.loadPixel = function () {
+      if (window.__pixelLoaded) return;
+      window.__pixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1515308506137464');
+      fbq('track', 'PageView');
+      if (window.ML_TRACK_LEAD) { fbq('track', 'Lead'); }
+    };
+
     window.gtagConsentUpdate = function (state) {
       var granted = state === 'granted';
       gtag('consent', 'update', {
@@ -31,7 +47,7 @@
         ad_user_data: granted ? 'granted' : 'denied',
         ad_personalization: granted ? 'granted' : 'denied'
       });
-      if (granted) window.loadGTM();
+      if (granted) { window.loadGTM(); window.loadPixel(); }
     };
 
     try {
