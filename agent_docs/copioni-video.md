@@ -4,19 +4,34 @@
 > (YouTube `gdaphi_EpzM`), rimosso il 2026-07-29 perché parlava dei tre percorsi
 > a 397/597/897 €/mese che non esistono più.
 
-## Come girarli
+## Come si producono
 
-- **Formato: verticale 9:16**, col telefono. Il valore più alto di questo video è
-  come creatività dell'inserzione, e lì il verticale non si discute. Sul sito un
-  verticale centrato sta bene lo stesso (il contenitore va adattato nel CSS).
-- **Lascia margine** sopra la testa e sotto il petto: serve per ritagliare in 4:5
-  o quadrato senza tagliare la faccia.
-- **Luce naturale davanti**, finestra di fronte e non alle spalle.
-- **Audio**: stanza con tende o tappeti. In cucina rimbomba.
-- **Una ripresa sola, niente montaggio.** Se sbagli una parola vai avanti:
-  l'imperfezione, in questo formato, aumenta la credibilità invece di toglierla.
-  È lo stesso principio del formato "selfie da telefono" descritto in `lead-magnet.html`.
-- **I primi tre secondi decidono tutto.** Mai "ciao a tutti", mai presentarsi per primo.
+**Non si girano col telefono: si generano.** La pipeline di Tito è
+`script → HeyGen → HyperFrames`, documentata in
+`4 - Materiale/Come lavoriamo - pipeline video.md`. Tito non riprende: scrive o
+approva lo script, HeyGen produce il parlato in 9:16, HyperFrames monta
+(scontorno, B-roll, grafiche, sottotitoli, 6 tipi di scena).
+
+Conseguenze pratiche sulla scrittura degli script:
+
+- **Scrivere per essere ascoltati, non letti.** Frasi corte, una idea per frase.
+  HeyGen legge quello che c'è: una subordinata lunga diventa una frase
+  incomprensibile a voce.
+- **Niente indicazioni di regia dentro al testo.** Solo le parole da pronunciare;
+  le pause si ottengono con la punteggiatura, non con note tipo "(pausa)".
+- **Occhio ai numeri e alle sigle**: "10€ al giorno" va scritto come si pronuncia
+  — "dieci euro al giorno" — altrimenti la lettura esce sbagliata.
+- **I primi tre secondi decidono tutto.** Mai "ciao a tutti", mai presentarsi per
+  primo: si parte dal problema o dalla storia.
+- **Formato verticale 9:16**, gestito dalla pipeline.
+- La durata reale la si misura **dopo** la generazione: il conteggio a battute è
+  sempre ottimista.
+
+> ⚠️ **Da decidere prima delle ads**: le creatività dell'inserzione le facciamo
+> con l'avatar HeyGen o con un video vero di Tito? Sui social organici l'avatar
+> funziona già (71 post pubblicati). Ma chi clicca un'inserzione atterra su un sito
+> pieno di foto vere e il 23 settembre trova Tito in carne e ossa in diretta.
+> Non è un problema di qualità — è di aspettativa. Vedi nota in fondo.
 
 ---
 
@@ -97,9 +112,32 @@ come le due pagine (vedi `PIANO.md`, decisione del 2026-07-29):
 Girarli nella stessa serata costa dieci minuti in più e ti evita di ritrovarti,
 il 24 settembre, con un sito che invita a un evento già passato.
 
-## Dopo la registrazione
+## Dopo la generazione
 
-1. Carica entrambi su YouTube (anche non in elenco va bene).
-2. Passami i due ID: rimetto la facciata video nel sito e ne aggiungo una sulla landing.
-3. Il file originale verticale serve **anche** per l'inserzione: quello non passa
-   da YouTube, si carica direttamente nel gestore inserzioni.
+1. HeyGen produce il grezzo → pipeline HyperFrames → reel montato.
+2. Caricare entrambi su YouTube (anche non in elenco va bene) e passarmi i due ID:
+   rimetto la facciata video nel sito e ne aggiungo una sulla landing.
+3. Il file verticale montato serve **anche** per l'inserzione: quello non passa da
+   YouTube, si carica direttamente nel gestore inserzioni di Meta.
+
+---
+
+## Nota: avatar o Tito vero, nelle inserzioni
+
+Questione aperta, da chiudere prima di lunedì.
+
+**A favore dell'avatar:** la pipeline è già rodata, 71 post pubblicati, gli Short
+migliori fanno 264-362 visualizzazioni. Produzione veloce e ripetibile, e il costo
+marginale di un video in più è quasi zero.
+
+**A favore di un video vero:** l'inserzione parla a un pubblico **freddo**, che non
+ha mai visto Tito. Quella persona poi atterra su un sito con foto reali e, se si
+iscrive, il 23 settembre si collega a una diretta con Tito in carne e ossa che
+condivide lo schermo. Se il primo contatto è un avatar, i tre passaggi non
+raccontano la stessa persona — e il posizionamento è tutto costruito su
+*"mi siedo accanto a te"*, cioè sulla presenza.
+
+**Via di mezzo praticabile:** avatar per i contenuti organici (dove il pubblico ti
+conosce già e la frequenza conta), video vero per le creatività a pagamento
+(dove conta la prima impressione). Un solo video reale da 60 secondi copre tutta
+la campagna fino al 23 settembre.

@@ -14,11 +14,30 @@ Impianto già costruito nell'account:
 | Form embedded `Diretta 23 settembre` (ID **`nNu1Yl`**) | ✅ creato: campi Nome + Email, redirect a `grazie-diretta.html` |
 | Double opt-in | ✅ **disattivato** |
 | Form collegato in `diretta.html` e nel popup di `index.html` | ✅ fatto |
-| Automazione `Diretta 23 settembre - Nurturing` | ⚠️ creata, innesco "Joins group" impostato, **Email 1 senza corpo** |
+| Automazione `Diretta 23 settembre - Nurturing` | ✅ **ATTIVA dal 2026-08-04** |
 
-> ⚠️ **NON attivare l'automazione finché i corpi delle email non sono scritti.**
-> Oggi Email 1 esiste come passaggio ma è vuota: attivandola gli iscritti riceverebbero
-> un'email senza contenuto.
+### L'automazione è viva (2026-08-04)
+
+```
+Si iscrive al gruppo "Diretta 23 settembre"
+        ↓  subito
+Email 1 — "Ci sei — ma manca un passaggio"
+        ↓  3 giorni
+Email 2 — "Ha dovuto spegnere la campagna"
+```
+
+Scritte nell'**editor semplice**, non con un template grafico: per un'email personale
+il testo semplice rende di più, sembra scritta da una persona e non da un'azienda.
+Il colore dei link è stato portato all'oro del brand (`#C9A84C`): era bianco come il
+testo, quindi nessuno avrebbe capito che erano cliccabili.
+
+Test inviato a `info@scuoladinetwork.com` prima dell'attivazione.
+
+**Modificare un'automazione attiva si può**, senza spegnerla: chi è già dentro il
+percorso prosegue, le modifiche valgono per chi entra dopo.
+
+**Restano da fare le email 3-8** (vedi scaletta sotto). Non urgono: la 3 parte dieci
+giorni dopo l'iscrizione, quindi c'è tempo fino a metà agosto.
 
 **Nota:** il campo *Preheader* è bloccato sul piano Free — i preheader indicati sotto
 sono da ignorare finché non si passa a un piano superiore.

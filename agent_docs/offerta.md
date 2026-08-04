@@ -92,9 +92,24 @@ L'outline resta valido come **elenco degli argomenti e loro ordine**, non come f
 - Ogni gradino vende quello sopra: corso → chi vuole di più sale al Tavolo → chi vuole che lo faccia Tito sale alla Partnership.
 - Il coaching 1:1 "a tempo pieno" **sparisce**: esiste solo nel gradino 3, dove è pagato quanto vale.
 
-## Nota: il vero problema di Tito è la produzione contenuti
+## ~~Nota: il vero problema di Tito è la produzione contenuti~~ — SUPERATA (2026-08-04)
 
-Separato dall'offerta, ma prioritario. Tito è schiacciato dal produrre contenuti ogni settimana — ironico visto che insegna la leva AI sui contenuti. Prossimo cantiere (non ancora progettato): un **sistema di produzione contenuti a leva** che usa il suo clone AI (HeyGen) + repurposing per togliere Tito dal collo di bottiglia. Da progettare dopo la validazione dell'offerta.
+> Questa nota diceva che il sistema di produzione a leva con clone AI era un
+> *"prossimo cantiere, non ancora progettato"*. **È falso: esiste ed è in produzione.**
+
+La pipeline reale è `script → HeyGen → HyperFrames`:
+Tito **non riprende niente**. Scrive o approva lo script, il clone AI HeyGen genera il
+parlato in 9:16, la pipeline HyperFrames monta (scontorno, trascrizione, B-roll, grafiche,
+sottotitoli, sei tipi di scena, verifica dei fotogrammi). Documentata in
+`4 - Materiale/Come lavoriamo - pipeline video.md`.
+
+**Risultato verificato il 2026-08-04:** 71 post su Instagram, 296 video su YouTube,
+17 reel montati tra il 13 giugno e il 28 luglio — circa due a settimana, con costanza.
+
+**Quindi il collo di bottiglia non è più la produzione.** È l'**instradamento**: quei
+contenuti non mandano nessuno al sito (Short da 362 visualizzazioni, zero visite).
+E a monte, cosa dire: il limite ora è la scrittura degli script e la strategia,
+non la capacità produttiva. Vedi `PIANO.md`.
 
 ## Prezzi = indicativi, da validare
 
