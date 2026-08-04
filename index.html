@@ -569,26 +569,41 @@
           dalla tua zona e da come lavori i contatti una volta arrivati.
         </p>
 
-        <!-- ============================================================
-             ⚠️ TITO: QUI LE TESTIMONIANZE REALI, QUANDO LE HAI RACCOLTE
-             Struttura pronta, basta sostituire i testi e togliere il commento.
-             Chiedi a Giorgio e ai networker del corso: nome, città, una frase
-             loro — e se possibile un vocale o un video da 30 secondi col telefono.
+      </div>
 
-        <div class="testimonianze__grid" style="margin-top:3rem;">
-          <div class="testimonianza">
-            <p class="testimonianza__testo">"[frase testuale della persona]"</p>
-            <div class="testimonianza__autore">
-              <div class="testimonianza__avatar">G</div>
-              <div>
-                <span class="testimonianza__nome">[Nome]</span>
-                <span class="testimonianza__ruolo">[Ruolo — Città]</span>
-              </div>
-            </div>
-          </div>
+      <!-- ============================================================
+           TESTIMONIANZE VIDEO REALI
+           Due video gia' pubblici sul canale YouTube di Tito.
+           Si caricano solo al click (vedi js/main.js): YouTube scrive
+           cookie appena l'iframe esiste, cosi' parte solo se l'utente vuole.
+      ============================================================ -->
+      <div class="vt" style="margin-top:4rem;">
+        <div class="section__header section__header--center">
+          <p class="section__eyebrow">Chi ci ha lavorato</p>
+          <h3 class="vt__title">Te lo dicono loro</h3>
         </div>
 
-        ============================================================ -->
+        <div class="vt__grid">
+          <figure class="vt__item">
+            <div class="yt-facade" data-videoid="31DWshfbrlI" role="button" tabindex="0" aria-label="Guarda la testimonianza di Antonella Iovine">
+              <img src="https://img.youtube.com/vi/31DWshfbrlI/hqdefault.jpg" alt="Antonella Iovine racconta la sua esperienza" class="yt-facade__thumb" loading="lazy">
+              <div class="yt-facade__play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6 3 20 12 6 21 6 3" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <figcaption class="vt__cap"><strong>Antonella Iovine</strong><span>Networker</span></figcaption>
+          </figure>
+
+          <figure class="vt__item">
+            <div class="yt-facade" data-videoid="8ZfCsYkQIx4" role="button" tabindex="0" aria-label="Guarda la testimonianza di Giorgio Schipilliti">
+              <img src="https://img.youtube.com/vi/8ZfCsYkQIx4/hqdefault.jpg" alt="Giorgio Schipilliti racconta la sua esperienza" class="yt-facade__thumb" loading="lazy">
+              <div class="yt-facade__play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6 3 20 12 6 21 6 3" fill="currentColor"/></svg>
+              </div>
+            </div>
+            <figcaption class="vt__cap"><strong>Giorgio Schipilliti</strong><span>Networker</span></figcaption>
+          </figure>
+        </div>
       </div>
 
     </div>

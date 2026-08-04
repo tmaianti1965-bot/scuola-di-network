@@ -100,24 +100,39 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   setTimeout(revealAll, 3000);
 })();
 
-// YouTube facade: sostituisce copertina con iframe al click
+// YouTube facade: sostituisce la copertina con l'iframe al click.
+// Gestisce piu' video nella stessa pagina; l'ID si legge da data-videoid,
+// non e' piu' scritto dentro al codice.
+//
+// Il caricamento al click non e' solo una questione di velocita': YouTube
+// scrive cookie appena l'iframe esiste. Cosi' parte solo se l'utente lo chiede.
 (function () {
-  var facade = document.getElementById('ytFacade');
-  if (!facade) return;
+  var facades = document.querySelectorAll('.yt-facade');
+  if (!facades.length) return;
 
-  facade.addEventListener('click', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    var wrapper = facade.parentNode;
-    var iframe = document.createElement('iframe');
-    iframe.setAttribute('src', 'https://www.youtube.com/embed/gdaphi_EpzM?autoplay=1&rel=0');
-    iframe.setAttribute('frameborder', '0');
-    iframe.setAttribute('allowfullscreen', '');
-    iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
-    iframe.style.width = '100%';
-    iframe.style.height = '500px';
-    iframe.style.display = 'block';
-    wrapper.replaceChild(iframe, facade);
+  Array.prototype.forEach.call(facades, function (facade) {
+    facade.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      var id = facade.getAttribute('data-videoid');
+      if (!id) return;
+
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('src', 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+      iframe.setAttribute('title', facade.getAttribute('aria-label') || 'Video');
+      iframe.style.width = '100%';
+      iframe.style.aspectRatio = '16 / 9';
+      iframe.style.height = 'auto';
+      iframe.style.display = 'block';
+      iframe.style.border = '0';
+      iframe.style.borderRadius = 'var(--radius)';
+
+      facade.parentNode.replaceChild(iframe, facade);
+    });
   });
 })();
 

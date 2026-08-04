@@ -1582,3 +1582,39 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-align: center;
 }
 .legal-disclaimer p:last-child { margin-bottom: 0; }
+
+/* === TESTIMONIANZE VIDEO === */
+.vt__title {
+  font-family: var(--font-title);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: var(--color-primary);
+  margin-bottom: 0.6rem;
+}
+.vt__grid {
+  display: grid;
+  gap: 1.6rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+@media (min-width: 720px) { .vt__grid { grid-template-columns: 1fr 1fr; } }
+.vt__item { margin: 0; }
+.vt__item .yt-facade { border-radius: var(--radius); overflow: hidden; }
+.vt__cap {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.8rem;
+  text-align: center;
+}
+.vt__cap strong {
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+.vt__cap span {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-top: 0.15rem;
+}
