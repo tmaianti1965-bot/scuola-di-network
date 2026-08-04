@@ -51,11 +51,17 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
 
   targets.forEach(function (el) { el.classList.add('fade-in'); });
 
-  if (!('IntersectionObserver' in window)) {
+  function revealAll() {
     targets.forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    revealAll();
     return;
   }
 
+  // rootMargin generoso: rivela anche ciò che sta poco sotto la piega,
+  // così arrivando da un'ancora non si atterra su una schermata bianca.
   const observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
@@ -63,9 +69,35 @@ document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
+  }, { threshold: 0, rootMargin: '0px 0px 15% 0px' });
 
   targets.forEach(function (el) { observer.observe(el); });
+
+  // Passata immediata: tutto ciò che è già nello schermo (o sopra) viene
+  // mostrato subito, senza aspettare l'osservatore. Serve quando la pagina
+  // si apre già scrollata — link con #ancora, ricarica a metà pagina,
+  // ritorno indietro dal browser.
+  function revealVisibleNow() {
+    const soglia = window.innerHeight * 1.15;
+    targets.forEach(function (el) {
+      if (el.classList.contains('visible')) return;
+      if (el.getBoundingClientRect().top < soglia) {
+        el.classList.add('visible');
+        observer.unobserve(el);
+      }
+    });
+  }
+
+  revealVisibleNow();
+  window.addEventListener('load', revealVisibleNow);
+  window.addEventListener('hashchange', function () {
+    setTimeout(revealVisibleNow, 60);
+  });
+
+  // Rete di sicurezza: se per qualsiasi motivo l'osservatore non parte,
+  // dopo 3 secondi si mostra tutto. Meglio un'animazione persa che una
+  // pagina bianca — il contenuto non deve MAI dipendere dal JS per esistere.
+  setTimeout(revealAll, 3000);
 })();
 
 // YouTube facade: sostituisce copertina con iframe al click

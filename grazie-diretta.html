@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <!-- Pagina di conversione dell'iscrizione alla diretta: spara l'evento Lead -->
+  <script>window.ML_TRACK_LEAD = true;</script>
+
+  <!-- Consent Mode v2 + caricamento condizionato di GTM (GDPR) -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
+    });
+
+    window.loadGTM = function () {
+      if (window.__gtmLoaded) return;
+      window.__gtmLoaded = true;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WN82N9PX');
+    };
+
+    window.loadPixel = function () {
+      if (window.__pixelLoaded) return;
+      window.__pixelLoaded = true;
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1515308506137464');
+      fbq('track', 'PageView');
+      if (window.ML_TRACK_LEAD) { fbq('track', 'Lead'); }
+    };
+
+    window.gtagConsentUpdate = function (state) {
+      var granted = state === 'granted';
+      gtag('consent', 'update', {
+        ad_storage: granted ? 'granted' : 'denied',
+        analytics_storage: granted ? 'granted' : 'denied',
+        ad_user_data: granted ? 'granted' : 'denied',
+        ad_personalization: granted ? 'granted' : 'denied'
+      });
+      if (granted) { window.loadGTM(); window.loadPixel(); }
+    };
+
+    try {
+      if (localStorage.getItem('cookie-consent') === 'granted') {
+        window.gtagConsentUpdate('granted');
+      }
+    } catch (e) {}
+  </script>
+  <!-- End Consent Mode / GTM -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ci sei — Diretta 23 settembre | Scuola di Network</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .gd { padding: 8.5rem 0 5rem; }
+    .gd__inner { max-width: 680px; margin: 0 auto; text-align: center; }
+    .gd__check { font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-bottom: 1.2rem; }
+    .gd h1 { font-family: var(--font-title); font-size: clamp(1.8rem, 4.5vw, 2.6rem); color: var(--color-white); line-height: 1.2; margin-bottom: 1.2rem; }
+    .gd__sub { color: var(--color-light); font-size: 1.05rem; line-height: 1.65; margin-bottom: 2.4rem; }
+
+    .gd-when { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 0 2.2rem; border: 1px solid rgba(201,168,76,0.45); border-radius: var(--radius); padding: 1.1rem 1.8rem; margin-bottom: 2.8rem; }
+    .gd-when__item { text-align: center; padding: 0.3rem 0; }
+    .gd-when__label { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); display: block; margin-bottom: 0.2rem; }
+    .gd-when__value { font-family: var(--font-mono); font-size: 1.05rem; color: var(--color-white); }
+
+    .gd-step { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.3); border-radius: var(--radius); padding: 2rem 1.8rem; text-align: left; margin-bottom: 1rem; }
+    .gd-step__num { font-family: var(--font-mono); color: var(--color-accent); font-size: 0.78rem; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
+    .gd-step h2 { font-family: var(--font-title); font-size: 1.25rem; color: var(--color-white); margin-bottom: 0.7rem; }
+    .gd-step p { color: var(--color-light); font-size: 0.97rem; line-height: 1.6; margin-bottom: 1.2rem; }
+    .gd-step p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="Logo Network School (1).png" alt="Scuola di Network" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="nav__logo-text" style="display:none">Scuola di Network</span>
+      </a>
+    </div>
+  </nav>
+
+  <section class="section section--dark gd">
+    <div class="container">
+      <div class="gd__inner">
+        <p class="gd__check">Iscrizione confermata</p>
+        <h1>Ci sei. Ora manca un solo passaggio.</h1>
+        <p class="gd__sub">
+          Ti ho mandato una email di conferma. Ma la diretta si tiene dentro la
+          community, quindi per poter entrare devi farti un accesso adesso —
+          ci metti due minuti e poi non ci pensi più.
+        </p>
+
+        <div class="gd-when">
+          <div class="gd-when__item">
+            <span class="gd-when__label">Quando</span>
+            <span class="gd-when__value">Mer 23 settembre</span>
+          </div>
+          <div class="gd-when__item">
+            <span class="gd-when__label">Ora</span>
+            <span class="gd-when__value">21:00</span>
+          </div>
+          <div class="gd-when__item">
+            <span class="gd-when__label">Durata</span>
+            <span class="gd-when__value">1 ora</span>
+          </div>
+        </div>
+
+        <div class="gd-step">
+          <p class="gd-step__num">Passo 1 — fallo ora</p>
+          <h2>Entra nella community</h2>
+          <p>
+            È gratis. È lì che il 23 settembre trovi il link per collegarti,
+            e nel frattempo è dove ti rispondo se hai domande.
+          </p>
+          <p>
+            <a href="https://www.skool.com/scuola-di-network-2283" target="_blank" rel="noopener" class="btn btn--gold btn--lg">
+              Entra nella community
+            </a>
+          </p>
+        </div>
+
+        <div class="gd-step">
+          <p class="gd-step__num">Passo 2 — trenta secondi</p>
+          <h2>Segnati la data adesso</h2>
+          <p>
+            Mercoledì 23 settembre, ore 21. Mettila in calendario subito, con una
+            sveglia mezz'ora prima: ti scrivo comunque un promemoria, ma le cose
+            segnate si dimenticano molto meno.
+          </p>
+        </div>
+
+        <div class="gd-step">
+          <p class="gd-step__num">Passo 3 — se ti va</p>
+          <h2>Porta qualcuno del tuo gruppo</h2>
+          <p>
+            Se hai persone in squadra che stanno finendo i contatti da chiamare,
+            gira loro il link. Guardare insieme e confrontarsi dopo vale il doppio.
+          </p>
+          <p>
+            <a href="diretta.html" class="btn btn--outline">Copia il link della diretta</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 Scuola di Network — Tito Maianti. Tutti i diritti riservati.</p>
+        <p>
+          P.IVA 04544730981 — Via A. Regosa 11, 25024 Leno (BS) —
+          <a href="mailto:tito@scuoladinetwork.com">tito@scuoladinetwork.com</a> —
+          <a href="tel:+393208785472">+39 320 878 5472</a>
+        </p>
+        <p>
+          <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
+          <button type="button" class="cookie-manage" data-cookie="manage">Gestisci cookie</button>
+        </p>
+      </div>
+
+      <div class="container legal-disclaimer">
+        <p>
+          Questo sito non fa parte del sito Facebook o di Meta Platforms, Inc.
+          Non è in alcun modo approvato, sponsorizzato o amministrato da Meta.
+          FACEBOOK e INSTAGRAM sono marchi registrati di Meta Platforms, Inc.
+        </p>
+        <p>
+          I risultati citati si riferiscono a casi specifici e non costituiscono
+          una garanzia. Ogni risultato dipende dal prodotto, dal mercato di
+          riferimento, dal budget investito e dall'impegno della singola persona.
+          Non viene promesso né garantito alcun guadagno.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Consenso cookie">
+    <p class="cookie-banner__text">
+      Usiamo cookie tecnici e, previo tuo consenso, strumenti di analisi e
+      marketing (Google, Meta). Puoi accettare o rifiutare. Dettagli nella
+      <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <div class="cookie-banner__actions">
+      <button type="button" class="cookie-banner__btn cookie-banner__btn--reject" data-cookie="reject">Rifiuta</button>
+      <button type="button" class="cookie-banner__btn cookie-banner__btn--accept" data-cookie="accept">Accetta</button>
+    </div>
+  </div>
+
+  <script src="js/cookie-consent.js" defer></script>
+
+</body>
+</html>

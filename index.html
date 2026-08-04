@@ -62,10 +62,15 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Scuola di Network di Tito Maianti — 30 anni di esperienza nel network marketing. Mi siedo accanto a te, condivido il tuo schermo e costruiamo il tuo sistema di contatti insieme.">
-  <meta property="og:title" content="Scuola di Network — Tito Maianti">
-  <meta property="og:description" content="Apriamo il computer. Facciamo insieme. Niente corsi da guardare — lavoriamo fianco a fianco, schermo condiviso, mouse in mano.">
-  <meta property="og:image" content="img/tito-hero.jpg">
+  <meta name="description" content="Tito Maianti, 30 anni nel network marketing. Mercoledì 23 settembre, ore 21: costruisco una campagna Facebook Lead Ad in diretta, dal copy alla pubblicazione. Gratis.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ha dovuto spegnere la campagna: aveva troppi contatti">
+  <meta property="og:description" content="Mercoledì 23 settembre, ore 21. In un'ora costruisco una Lead Ad davanti a te: copy, immagine e video con l'AI, campagna online. Diretta gratuita per networker.">
+  <!-- ⚠️ TITO: questa era rotta (puntava a img/tito-hero.jpg, cartella inesistente):
+       condividendo il link non appariva nessuna anteprima. Ora punta a una foto vera.
+       Meglio ancora sarebbe un'immagine fatta apposta da 1200x630 px con data e titolo. -->
+  <meta property="og:image" content="Progetto%20senza%20titolo%20(7).png">
+  <meta property="og:locale" content="it_IT">
   <title>Scuola di Network — Tito Maianti | Apriamo il computer. Facciamo insieme.</title>
 
   <!-- Google Fonts -->
@@ -95,7 +100,7 @@
       </button>
       <ul class="nav__links" id="navLinks">
         <li><a href="#chi-e-tito">Chi è Tito</a></li>
-        <li><a href="#percorsi">Percorsi</a></li>
+        <li><a href="#percorsi">La diretta</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#contatti">Contatti</a></li>
         <li><a href="privacy.html">Privacy</a></li>
@@ -118,19 +123,20 @@
       <p class="hero__eyebrow">30 anni sul campo. Niente teorie.</p>
       <h1 class="hero__headline">Apriamo il computer.<br>Facciamo insieme.</h1>
       <p class="hero__sub">
-        Niente corsi da guardare. Mi siedo accanto a te, condivido il tuo schermo
-        e costruiamo il tuo sistema di contatti insieme.
+        Niente corsi da guardare. Apro lo schermo e costruisco una campagna
+        Facebook davanti a te — dal foglio bianco fino a "Pubblica".
       </p>
       <div class="hero__ctas">
-        <a href="https://www.skool.com/scuola-di-network-2283" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
-          Entra gratis nella community
+        <a href="diretta.html" class="btn btn--primary btn--lg">
+          Prenota il posto in diretta
         </a>
+        <!-- Il pulsante puntava al video, rimosso perché parlava dell'offerta vecchia.
+             Rimettere l'icona play quando il video nuovo sarà online. -->
         <a href="#video" class="btn btn--ghost btn--lg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-          Guarda come funziona
+          Come lavoro
         </a>
       </div>
-      <p class="hero__trust">Entra tra i primi nella community gratuita</p>
+      <p class="hero__trust">Mercoledì 23 settembre, ore 21 — gratis, posti limitati</p>
     </div>
     <a href="#problema" class="hero__scroll" aria-label="Scorri in basso">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -192,7 +198,7 @@
           dalla lista nomi e dalla fortuna.
         </p>
         <p class="problema__soluzione-firma">
-          Questo è quello che costruiamo insieme, schermo condiviso, passo dopo passo.
+          Il 23 settembre te lo faccio vedere: apro lo schermo e lo costruisco davanti a te.
         </p>
       </div>
     </div>
@@ -207,18 +213,31 @@
         <p class="section__eyebrow">Come funziona</p>
         <h2 class="section__title">Non ti insegno. <em>Lo facciamo insieme.</em></h2>
       </div>
-      <div class="video-centrato">
-        <div class="yt-facade" id="ytFacade" data-videoid="gdaphi_EpzM" role="button" tabindex="0" aria-label="Riproduci video">
-          <img src="https://img.youtube.com/vi/gdaphi_EpzM/maxresdefault.jpg" alt="Guarda il video di Tito Maianti" class="yt-facade__thumb">
-          <div class="yt-facade__play" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6 3 20 12 6 21 6 3" fill="currentColor"/></svg>
-          </div>
-        </div>
-      </div>
+      <!-- ============================================================
+           ⚠️ VIDEO RIMOSSO IL 2026-07-29 — QUI VA QUELLO NUOVO
+           Il video precedente (YouTube gdaphi_EpzM) parlava dei tre percorsi
+           vecchi (397/597/897 €/mese), che non esistono più: contraddiceva
+           il resto della pagina.
+
+           TITO: registra il sostituto — tu, telefono o webcam, luce naturale,
+           una ripresa sola, 60-90 secondi: chi sei, per chi lavori, come lavori.
+           Niente montaggio. Poi rimetti qui la facciata YouTube sostituendo
+           l'ID del video (il JS in js/main.js la gestisce già, cerca #ytFacade):
+
+           <div class="video-centrato">
+             <div class="yt-facade" id="ytFacade" data-videoid="NUOVO_ID" role="button" tabindex="0" aria-label="Riproduci video">
+               <img src="https://img.youtube.com/vi/NUOVO_ID/maxresdefault.jpg" alt="Guarda il video di Tito Maianti" class="yt-facade__thumb">
+               <div class="yt-facade__play" aria-hidden="true">
+                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polygon points="6 3 20 12 6 21 6 3" fill="currentColor"/></svg>
+               </div>
+             </div>
+           </div>
+      ============================================================ -->
+
       <div class="video-sotto">
         <ul class="promessa__lista promessa__lista--centrata">
-          <li><span class="check-circle">✓</span> La tua prima campagna Meta — configurata insieme</li>
-          <li><span class="check-circle">✓</span> Un sistema di lead generation che non dipende da nessuno</li>
+          <li><span class="check-circle">✓</span> Una campagna Lead Ad montata dal vivo, non spiegata a parole</li>
+          <li><span class="check-circle">✓</span> Un sistema di contatti che non dipende dalla tua lista</li>
           <li><span class="check-circle">✓</span> Zero lista nomi, zero telefonate a freddo</li>
         </ul>
         <a href="https://www.skool.com/scuola-di-network-2283" target="_blank" rel="noopener" class="btn btn--primary btn--lg">
@@ -270,7 +289,7 @@
               <span>networker seguiti</span>
             </div>
           </div>
-          <a href="#contatti" class="btn btn--outline">Parliamo della tua situazione</a>
+          <a href="https://www.skool.com/scuola-di-network-2283" target="_blank" rel="noopener" class="btn btn--outline">Entra nella community</a>
         </div>
       </div>
     </div>
@@ -283,10 +302,10 @@
     <div class="container">
       <div class="section__header section__header--center">
         <p class="section__eyebrow section__eyebrow--gold">Gratis. Subito.</p>
-        <h2 class="section__title">Entra nella community gratuita</h2>
+        <h2 class="section__title">La community è la sala della diretta</h2>
         <p class="section__sub">
-          Il primo passo è conoscersi. Entra in Skool, guarda come lavoro,
-          fai le tue domande. Non ti chiedo nulla in cambio.
+          È lì che il 23 settembre trovi il link per collegarti, ed è lì che
+          rispondo alle domande prima e dopo. Entrare costa due minuti e zero euro.
         </p>
       </div>
 
@@ -295,10 +314,10 @@
           <div class="community__benefit-icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 10l4.553-2.069A1 1 0 0121 8.876V15.5a1 1 0 01-.555.894L15 19M15 10v9M15 10H9M15 19H9M9 10L4.447 7.931A1 1 0 013 8.876V15.5a1 1 0 00.555.894L9 19M9 10v9"/></svg>
           </div>
-          <h3>Sessioni pratiche mensili</h3>
+          <h3>Le dirette, dal vivo</h3>
           <p>
-            Una volta al mese apriamo il computer insieme in live.
-            Casi reali, domande vere, soluzioni concrete.
+            Apro il computer e costruisco davanti a te. Casi reali,
+            campagne vere, nessuna slide.
           </p>
         </div>
         <div class="community__benefit">
@@ -315,10 +334,10 @@
           <div class="community__benefit-icon">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
           </div>
-          <h3>Risposte in 48 ore</h3>
+          <h3>Le domande le leggo io</h3>
           <p>
-            Hai una domanda? La fai nella community. Rispondo io,
-            personalmente, entro 48 ore.
+            Scrivi il tuo dubbio nella community. Rispondo io, e alle
+            domande più utili rispondo direttamente in diretta.
           </p>
         </div>
       </div>
@@ -337,92 +356,40 @@
   <!-- ============================================================
        6. I PERCORSI
   ============================================================ -->
+  <!-- ============================================================
+       LA DIRETTA
+       Sostituisce i vecchi 3 tier mensili (397/597/897 €), superati dalla
+       scala "Autonomia Digitale" (agent_docs/offerta.md).
+       Oggi il sito ha un solo obiettivo: portare all'iscrizione alla diretta.
+       Il listino tornerà quando il corso esisterà davvero.
+  ============================================================ -->
   <section class="section section--light" id="percorsi">
     <div class="container">
       <div class="section__header section__header--center">
-        <p class="section__eyebrow">I percorsi</p>
-        <h2 class="section__title">Quando sei pronto a lavorare insieme</h2>
+        <p class="section__eyebrow">La prossima diretta</p>
+        <h2 class="section__title">Ha dovuto spegnere la campagna: aveva troppi contatti</h2>
         <p class="section__sub">
-          Prima entra nella community gratuita. Quando vuoi accelerare
-          e costruire il tuo sistema di lead generation in modo professionale,
-          scegli il percorso che fa per te.
+          Mercoledì 23 settembre, alle 21, costruisco una campagna Facebook Lead Ad
+          davanti a te: il copy, l'immagine e il video creati con l'intelligenza
+          artificiale, fino alla pubblicazione. Un'ora, gratis, in diretta.
         </p>
       </div>
 
-      <div class="percorsi">
+      <div style="max-width:760px; margin:0 auto; text-align:center;">
+        <p style="color:var(--color-text-muted); line-height:1.7; margin-bottom:2rem;">
+          Uno dei networker che seguo, mettendo <strong>10€ al giorno</strong>, ha iniziato
+          a ricevere otto contatti al giorno a un euro l'uno — e a chiuderne in media
+          uno al giorno. Poi si è fermato: non riusciva più a richiamarli tutti.
+          In diretta ti mostro come si arriva ad avere quel problema, e come si gestisce.
+        </p>
 
-        <div class="percorso">
-          <div class="percorso__header">
-            <h3 class="percorso__nome">Partenza Rapida</h3>
-            <div class="percorso__prezzo">
-              <span class="percorso__importo mono">€397</span>
-              <span class="percorso__periodo">/mese — 6 mesi</span>
-            </div>
-            <p class="percorso__anticipo">oppure <span class="mono">€1.997</span> anticipato</p>
-          </div>
-          <ul class="percorso__lista">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Setup completo in videocall</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1 coaching ogni 15 giorni (60 min)</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Elementor Pro incluso</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Prima landing page creata insieme</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Prima campagna Meta configurata</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Accesso a tutte le registrazioni</li>
-          </ul>
-          <a href="#contatti" class="btn btn--outline btn--full">Parliamo</a>
-        </div>
+        <a href="diretta.html" class="btn btn--gold btn--lg">Prenota il tuo posto</a>
 
-        <div class="percorso percorso--featured">
-          <div class="percorso__badge">Più scelto</div>
-          <div class="percorso__header">
-            <h3 class="percorso__nome">Acceleratore Pro</h3>
-            <div class="percorso__prezzo">
-              <span class="percorso__importo mono">€597</span>
-              <span class="percorso__periodo">/mese — 6 mesi</span>
-            </div>
-            <p class="percorso__anticipo">oppure <span class="mono">€2.997</span> anticipato</p>
-          </div>
-          <ul class="percorso__lista">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Setup completo in videocall</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 1 coaching a settimana (60 min)</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Elementor Pro incluso</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Prima landing page creata insieme</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Prima campagna Meta configurata</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Tracciamento conversioni</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Accesso a tutte le registrazioni</li>
-          </ul>
-          <a href="#contatti" class="btn btn--gold btn--full">Parliamo</a>
-        </div>
-
-        <div class="percorso">
-          <div class="percorso__header">
-            <h3 class="percorso__nome">Partnership Elite</h3>
-            <div class="percorso__prezzo">
-              <span class="percorso__importo mono">€897</span>
-              <span class="percorso__periodo">/mese — 6 mesi</span>
-            </div>
-            <p class="percorso__anticipo">oppure <span class="mono">€4.497</span> anticipato</p>
-          </div>
-          <ul class="percorso__lista">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Setup completo in videocall</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 2 coaching a settimana (90 min)</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Elementor Pro incluso</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Prima landing page creata insieme</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Prima campagna Meta configurata</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Linea diretta WhatsApp 24/7</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Call strategiche extra in emergenza</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Tracciamento conversioni avanzato</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Accesso a tutte le registrazioni</li>
-          </ul>
-          <a href="#contatti" class="btn btn--outline btn--full">Parliamo</a>
-        </div>
-
+        <p style="margin-top:1.4rem; font-size:0.9rem; color:var(--color-text-muted);">
+          Posti limitati. Se quella sera non puoi, iscriviti lo stesso:
+          mando la registrazione a chi si è iscritto.
+        </p>
       </div>
-
-      <p class="percorsi__nota">
-        I posti sono limitati — lavoro con un numero ristretto di clienti alla volta
-        per garantire la qualità dell'affiancamento.
-        <a href="#contatti">Parliamo prima di decidere.</a>
-      </p>
     </div>
   </section>
 
@@ -433,10 +400,10 @@
     <div class="container">
       <div class="section__header section__header--center">
         <p class="section__eyebrow section__eyebrow--gold">Il risultato concreto</p>
-        <h2 class="section__title">Cosa costruiamo insieme in 6 mesi</h2>
+        <h2 class="section__title">Cosa impari a costruire</h2>
         <p class="section__sub">
-          Non una lista di obiettivi teorici. Un sistema reale, tuo, che funziona
-          dopo che usciamo dallo schermo condiviso.
+          Non una lista di obiettivi teorici. Un sistema che continua a portarti
+          contatti anche nelle settimane in cui non hai tempo di occupartene.
         </p>
       </div>
 
@@ -451,46 +418,45 @@
         <div class="svilupperai__item">
           <span class="svilupperai__num mono">02</span>
           <div>
-            <h3>La tua prima campagna Meta Lead Ad</h3>
-            <p>Configurata, lanciata e ottimizzata insieme. Non su carta — dentro Ads Manager, in diretta.</p>
+            <h3>La tua prima campagna Lead Ad</h3>
+            <p>Non su carta: dentro il gestore inserzioni, comprese le schermate dove è facile sbagliare e bruciare budget.</p>
           </div>
         </div>
         <div class="svilupperai__item">
           <span class="svilupperai__num mono">03</span>
           <div>
-            <h3>Una landing page che converte</h3>
-            <p>Copy scritto con le regole del direct response. Design professionale. La costruiamo riga per riga.</p>
+            <h3>Il copy che ferma lo scroll</h3>
+            <p>Quattro blocchi: aggancio, qualificazione, prova, chiamata all'azione. Impari perché ogni riga sta lì, non a copiare un modello.</p>
           </div>
         </div>
         <div class="svilupperai__item">
           <span class="svilupperai__num mono">04</span>
           <div>
-            <h3>Tracciamento e dati reali</h3>
-            <p>Impari a leggere le metriche che contano. Costo per lead, tasso di apertura, conversioni — non più buio.</p>
+            <h3>Immagini e video con l'AI</h3>
+            <p>La creatività te la generi da solo in pochi minuti, senza videomaker e senza saper montare. Oppure col telefono, se preferisci metterci la faccia.</p>
           </div>
         </div>
         <div class="svilupperai__item">
           <span class="svilupperai__num mono">05</span>
           <div>
-            <h3>Un funnel email automatizzato</h3>
-            <p>Dalla lead all'appuntamento, in automatico. Sequenze che educano, costruiscono fiducia e portano all'azione.</p>
+            <h3>Cosa fare quando i contatti arrivano</h3>
+            <p>È qui che quasi tutti si fermano: raccolgono contatti e li lasciano morire. Primi cinque minuti, primo messaggio, follow-up di chi non risponde.</p>
           </div>
         </div>
         <div class="svilupperai__item">
           <span class="svilupperai__num mono">06</span>
           <div>
-            <h3>Copy diretto in ogni formato</h3>
-            <p>Ads, email, post. Impari a scrivere messaggi che fermano lo scroll e spingono all'azione — senza sembrare uno spammer.</p>
-          </div>
-        </div>
-        <div class="svilupperai__item">
-          <span class="svilupperai__num mono">07</span>
-          <div>
-            <h3>Indipendenza totale dall'upline</h3>
-            <p>Il sistema è tuo. Non dipende da chi sta sopra di te, da chi conosci, o da quante persone hai in lista.</p>
+            <h3>WhatsApp senza farti bloccare</h3>
+            <p>Parlare con le persone è il tuo mestiere, ma scrivere per primo a sconosciuti ti fa chiudere l'account. Ti mostro come far scrivere loro a te.</p>
           </div>
         </div>
       </div>
+
+      <p style="max-width:720px; margin:3rem auto 0; text-align:center; font-family:var(--font-title); font-size:1.35rem; line-height:1.45; color:var(--color-white);">
+        Alla fine il sistema è tuo. Non dipende da chi sta sopra di te,
+        da chi conosci, né da quante persone hai in lista.
+      </p>
+
     </div>
   </section>
 
@@ -539,7 +505,7 @@
           Se invece sei stanco dei risultati casuali e vuoi costruire qualcosa di tuo,
           di prevedibile, di replicabile — <strong>sei esattamente nel posto giusto.</strong>
         </p>
-        <a href="#contatti" class="btn btn--primary">Parliamo della tua situazione</a>
+        <a href="https://www.skool.com/scuola-di-network-2283" target="_blank" rel="noopener" class="btn btn--primary">Entra nella community</a>
       </div>
     </div>
   </section>
@@ -547,93 +513,84 @@
   <!-- ============================================================
        9. TESTIMONIANZE
   ============================================================ -->
+  <!-- ============================================================
+       9. LA PROVA
+       ⚠️ Le tre recensioni precedenti (Maria G. / Roberto F. / Anna M.) sotto
+       l'intestazione "Recensioni Google 5.0" erano SEGNAPOSTO INVENTATI e sono
+       state rimosse: recensioni false attribuite a Google violano il Codice del
+       Consumo e sono un motivo classico di blocco degli account pubblicitari Meta.
+       NON reinserirle e non rimettere il rating "5.0 su Google" finché non ci sono
+       recensioni Google vere e verificabili.
+
+       TITO: qui sotto vanno le testimonianze REALI (Giorgio, i networker del corso).
+       Servono: nome, ruolo/città, e una frase loro — meglio se registrata in video
+       o audio col telefono. Vedi i segnaposto commentati in fondo alla griglia.
+  ============================================================ -->
   <section class="section section--light" id="testimonianze">
     <div class="container">
       <div class="section__header section__header--center">
-        <p class="section__eyebrow">Recensioni Google</p>
-        <h2 class="section__title">Chi ha già lavorato con Tito</h2>
-        <div class="testimonianze__rating">
-          <div class="rating__stelle">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <span class="rating__voto mono">5.0</span>
-          <span class="rating__count">su Google</span>
-        </div>
+        <p class="section__eyebrow">Il caso</p>
+        <h2 class="section__title">Ha dovuto spegnere la campagna</h2>
+        <p class="section__sub">
+          Non ti mostro numeri miei. Ti mostro cosa è successo a un networker
+          che ha seguito il metodo — compreso il problema che si è ritrovato dopo.
+        </p>
       </div>
 
-      <div class="testimonianze__grid">
+      <div style="max-width:760px; margin:0 auto;">
+        <blockquote style="font-family:var(--font-title); font-size:clamp(1.25rem,3vw,1.65rem); line-height:1.45; color:var(--color-primary); border-left:3px solid var(--color-accent); padding-left:1.6rem; margin-bottom:2rem;">
+          Con 10€ al giorno ha iniziato a ricevere otto contatti al giorno,
+          a un euro l'uno. In media ne chiudeva uno al giorno. Poi ha spento
+          tutto: non riusciva più a richiamarli.
+        </blockquote>
 
-        <div class="testimonianza">
-          <div class="testimonianza__stelle">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <div class="dl-numbers" style="display:grid; grid-template-columns:repeat(2,1fr); gap:1rem;">
+          <div style="background:var(--color-white); border-radius:var(--radius); padding:1.3rem 0.9rem; text-align:center;">
+            <span class="mono" style="font-size:1.7rem; color:var(--color-primary); display:block; margin-bottom:0.3rem;">10€</span>
+            <span style="font-size:0.82rem; color:var(--color-text-muted);">di budget al giorno</span>
           </div>
-          <p class="testimonianza__testo">
-            "Tito non ti dà un corso da guardare — si siede davvero accanto a te.
-            Nella prima sessione abbiamo lanciato la mia prima campagna Meta.
-            Non ci credevo finché non ho visto arrivare i primi contatti."
-          </p>
-          <div class="testimonianza__autore">
-            <div class="testimonianza__avatar">M</div>
-            <div>
-              <strong>Maria G.</strong>
-              <span>Networker — Milano</span>
+          <div style="background:var(--color-white); border-radius:var(--radius); padding:1.3rem 0.9rem; text-align:center;">
+            <span class="mono" style="font-size:1.7rem; color:var(--color-primary); display:block; margin-bottom:0.3rem;">8</span>
+            <span style="font-size:0.82rem; color:var(--color-text-muted);">contatti al giorno</span>
+          </div>
+          <div style="background:var(--color-white); border-radius:var(--radius); padding:1.3rem 0.9rem; text-align:center;">
+            <span class="mono" style="font-size:1.7rem; color:var(--color-primary); display:block; margin-bottom:0.3rem;">1€</span>
+            <span style="font-size:0.82rem; color:var(--color-text-muted);">costo per contatto</span>
+          </div>
+          <div style="background:var(--color-white); border-radius:var(--radius); padding:1.3rem 0.9rem; text-align:center;">
+            <span class="mono" style="font-size:1.7rem; color:var(--color-primary); display:block; margin-bottom:0.3rem;">1</span>
+            <span style="font-size:0.82rem; color:var(--color-text-muted);">vendita al giorno, in media</span>
+          </div>
+        </div>
+
+        <p style="font-size:0.82rem; color:var(--color-text-muted); line-height:1.55; margin-top:1.4rem; font-style:italic;">
+          Sono i numeri di una persona sola, nel suo mercato e in un periodo preciso.
+          Non sono una promessa di quello che otterrai tu: dipende dal tuo prodotto,
+          dalla tua zona e da come lavori i contatti una volta arrivati.
+        </p>
+
+        <!-- ============================================================
+             ⚠️ TITO: QUI LE TESTIMONIANZE REALI, QUANDO LE HAI RACCOLTE
+             Struttura pronta, basta sostituire i testi e togliere il commento.
+             Chiedi a Giorgio e ai networker del corso: nome, città, una frase
+             loro — e se possibile un vocale o un video da 30 secondi col telefono.
+
+        <div class="testimonianze__grid" style="margin-top:3rem;">
+          <div class="testimonianza">
+            <p class="testimonianza__testo">"[frase testuale della persona]"</p>
+            <div class="testimonianza__autore">
+              <div class="testimonianza__avatar">G</div>
+              <div>
+                <span class="testimonianza__nome">[Nome]</span>
+                <span class="testimonianza__ruolo">[Ruolo — Città]</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="testimonianza">
-          <div class="testimonianza__stelle">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonianza__testo">
-            "Avevo già comprato 3 corsi online. Nessuno si era fermato a capire
-            la mia situazione specifica. Con Tito è diverso: ogni sessione
-            è calibrata su di me, sul mio business, sul mio target."
-          </p>
-          <div class="testimonianza__autore">
-            <div class="testimonianza__avatar">R</div>
-            <div>
-              <strong>Roberto F.</strong>
-              <span>Network marketer — Torino</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonianza">
-          <div class="testimonianza__stelle">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <p class="testimonianza__testo">
-            "In 6 mesi ho costruito un sistema che funziona. Non chiamo
-            più amici e parenti. I contatti arrivano, qualificati,
-            e io so come gestirli. Questo è quello che cercavo da anni."
-          </p>
-          <div class="testimonianza__autore">
-            <div class="testimonianza__avatar">A</div>
-            <div>
-              <strong>Anna M.</strong>
-              <span>Networker — Roma</span>
-            </div>
-          </div>
-        </div>
-
+        ============================================================ -->
       </div>
+
     </div>
   </section>
 
@@ -831,7 +788,7 @@
           <h4>Navigazione</h4>
           <ul>
             <li><a href="#chi-e-tito">Chi è Tito</a></li>
-            <li><a href="#percorsi">I Percorsi</a></li>
+            <li><a href="#percorsi">La diretta</a></li>
             <li><a href="#community">Community Skool</a></li>
             <li><a href="#contatti">Contatti</a></li>
           </ul>
@@ -850,6 +807,25 @@
       <div class="container footer__bottom-inner">
         <p>&copy; 2026 Scuola di Network — Tito Maianti. Tutti i diritti riservati.</p>
         <p>P.IVA 04544730981 — Via A. Regosa 11, 25024 Leno (BS) — <a href="mailto:tito@scuoladinetwork.com">tito@scuoladinetwork.com</a> — <a href="tel:+393208785472">+39 320 878 5472</a></p>
+      </div>
+
+      <!-- ============================================================
+           DISCLAIMER LEGALE
+           Obbligatorio di fatto quando si fa pubblicità su Meta e si citano
+           risultati. Va tenuto su tutte le pagine che ricevono traffico a pagamento.
+      ============================================================ -->
+      <div class="container legal-disclaimer">
+        <p>
+          Questo sito non fa parte del sito Facebook o di Meta Platforms, Inc.
+          Non è in alcun modo approvato, sponsorizzato o amministrato da Meta.
+          FACEBOOK e INSTAGRAM sono marchi registrati di Meta Platforms, Inc.
+        </p>
+        <p>
+          I risultati citati si riferiscono a casi specifici e non costituiscono
+          una garanzia. Ogni risultato dipende dal prodotto, dal mercato di
+          riferimento, dal budget investito e dall'impegno della singola persona.
+          Non viene promesso né garantito alcun guadagno.
+        </p>
       </div>
     </div>
   </footer>
@@ -875,14 +851,18 @@
   <div class="lm-popup" id="lmPopup" role="dialog" aria-live="polite" aria-label="Risorsa gratuita">
     <div class="lm-popup__box">
       <button type="button" class="lm-popup__close" id="lmPopupClose" aria-label="Chiudi">&times;</button>
-      <p class="lm-popup__eyebrow">Risorsa gratuita</p>
-      <h2 class="lm-popup__title">Da zero a prima campagna in un weekend</h2>
+      <p class="lm-popup__eyebrow">Diretta gratuita · 23 settembre</p>
+      <h2 class="lm-popup__title">Ha dovuto spegnere la campagna: aveva troppi contatti</h2>
       <p class="lm-popup__text">
-        Il framework in 3 fasi — copy, creatività, lancio — per pubblicare la tua prima Lead Ad.
-        Te lo mando via email in 30 secondi.
+        Mercoledì 23 settembre alle 21 costruisco una Lead Ad davanti a te —
+        copy, immagine e video con l'AI, fino alla pubblicazione. Un'ora, gratis.
       </p>
-      <!-- Widget embed MailerLite: form "Lead Magnet - Template Lead Ad", gruppo dedicato, singolo opt-in, redirect a lead-magnet.html -->
-      <div class="ml-embedded" data-form="AZj25o"></div>
+      <!-- Form MailerLite "Diretta 23 settembre" (creato 2026-07-29).
+           Gruppo dedicato "Diretta 23 settembre", opt-in singolo,
+           redirect a grazie-diretta.html. Non modificare i campi a mano:
+           si gestiscono dal builder MailerLite.
+           Il vecchio form del lead magnet era AZj25o. -->
+      <div class="ml-embedded" data-form="nNu1Yl"></div>
     </div>
   </div>
 

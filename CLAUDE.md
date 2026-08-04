@@ -44,6 +44,7 @@ ScuolaDiNetwork.com — sito statico (HTML + CSS + JS vanilla), hostato su GitHu
 
 - Brand, palette, font, copy, vincoli visivi → `agent_docs/brand.md`
 - Funnel lead, tracking Meta, TODO tecnici → `agent_docs/funnel.md`
+- **Offerta commerciale (nuova scala "Autonomia Digitale", 2026-07-25) → `agent_docs/offerta.md`** — sostituisce i 3 tier mensili €397/597/897 ancora presenti in `index.html` e nel PRD (obsoleti finché non aggiornati)
 - Link fissi (Skool, social) → `agent_docs/brand.md`
 - Visione, target, funnel completo, pricing coaching, roadmap e pagine da costruire → `PRD-ScuolaDiNetwork.md`
 - Credenziali (API key MailerLite, Group ID, GTM/Pixel ID) → `.claude/secrets.md` (locale, mai committato — non inserire mai valori reali qui)
