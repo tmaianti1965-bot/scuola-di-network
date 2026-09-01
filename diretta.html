@@ -1,460 +1,51 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <!-- Consent Mode v2 + caricamento condizionato di GTM (GDPR) -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      ad_storage: 'denied',
-      analytics_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      wait_for_update: 500
-    });
-
-    window.loadGTM = function () {
-      if (window.__gtmLoaded) return;
-      window.__gtmLoaded = true;
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-WN82N9PX');
-    };
-
-    window.loadPixel = function () {
-      if (window.__pixelLoaded) return;
-      window.__pixelLoaded = true;
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1515308506137464');
-      fbq('track', 'PageView');
-      if (window.ML_TRACK_LEAD) { fbq('track', 'Lead'); }
-    };
-
-    window.gtagConsentUpdate = function (state) {
-      var granted = state === 'granted';
-      gtag('consent', 'update', {
-        ad_storage: granted ? 'granted' : 'denied',
-        analytics_storage: granted ? 'granted' : 'denied',
-        ad_user_data: granted ? 'granted' : 'denied',
-        ad_personalization: granted ? 'granted' : 'denied'
-      });
-      if (granted) { window.loadGTM(); window.loadPixel(); }
-    };
-
-    try {
-      if (localStorage.getItem('cookie-consent') === 'granted') {
-        window.gtagConsentUpdate('granted');
-      }
-    } catch (e) {}
-  </script>
-  <!-- End Consent Mode / GTM -->
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diretta gratuita 23 settembre — Costruisco una Lead Ad davanti a te | Scuola di Network</title>
-  <meta name="description" content="Mercoledì 23 settembre, ore 21. In un'ora costruisco una campagna Facebook Lead Ad dal vivo: copy, immagine e video creati con l'AI, fino alla pubblicazione. Diretta gratuita per networker.">
-
-  <!-- Open Graph: la pagina verrà condivisa in chat e nei gruppi -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Costruisco una Lead Ad davanti a te — diretta gratuita, 23 settembre">
-  <meta property="og:description" content="Un'ora, in diretta: copy, creatività con l'AI e campagna online. Per networker che hanno finito la lista di amici e parenti.">
-  <meta property="og:locale" content="it_IT">
-
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://scuoladinetwork.com/">
+  <meta http-equiv="refresh" content="5; url=index.html">
+  <title>Questa pagina non &egrave; pi&ugrave; attiva &mdash; Scuola di Network</title>
+  <!--
+    2026-08-28: la diretta del 23 settembre 2026 e' stata cancellata.
+    Questa pagina non viene eliminata perche' potrebbero esistere link
+    esterni che ci puntano: reindirizza alla homepage.
+    Nessun tracking qui dentro: una pagina di rimbalzo non ha bisogno di
+    GTM ne' del Pixel, e cosi' non serve nemmeno il banner cookie.
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* === LANDING DIRETTA === */
-    /* .nav è position:fixed → il padding-top deve lasciarla passare sopra */
-    .dl-hero { background: var(--color-dark); color: var(--color-white); padding: 8.5rem 0 4rem; overflow: hidden; }
-    .dl-hero__grid { display: grid; gap: 2rem; align-items: center; }
-    @media (min-width: 900px) { .dl-hero__grid { grid-template-columns: 1.15fr 0.85fr; gap: 3rem; } }
-    .dl-hero__text { max-width: 720px; margin: 0 auto; text-align: center; }
-    @media (min-width: 900px) { .dl-hero__text { margin: 0; text-align: left; } }
-    .dl-hero__eyebrow { font-family: var(--font-mono); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; margin-bottom: 1.4rem; }
-    .dl-hero__headline { font-family: var(--font-title); font-size: clamp(1.9rem, 5vw, 3.1rem); line-height: 1.15; color: var(--color-white); margin-bottom: 1.4rem; }
-    .dl-hero__headline em { color: var(--color-accent); font-style: italic; }
-    .dl-hero__sub { font-size: 1.08rem; color: var(--color-light); line-height: 1.6; margin-bottom: 2.4rem; }
-
-    /* Foto: ritaglio con sfondo trasparente, sta bene sul fondo scuro.
-       Su mobile è nascosta per non spingere data e pulsante sotto la piega —
-       il traffico da Facebook è quasi tutto da telefono. */
-    .dl-hero__photo { display: none; }
-    @media (min-width: 900px) {
-      .dl-hero__photo { display: block; align-self: end; }
-      .dl-hero__photo img { width: 100%; max-width: 420px; display: block; margin: 0 auto -4rem; }
+    :root{
+      --color-dark:#0F1A3A; --color-accent:#C9A84C; --color-light:#F8F6F1;
+      --font-title:'Playfair Display',Georgia,serif; --font-body:'DM Sans',system-ui,sans-serif;
+      --radius:6px;
     }
-
-    .dl-when { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 0 2.2rem; border: 1px solid rgba(201,168,76,0.45); border-radius: var(--radius); padding: 1.1rem 1.8rem; margin-bottom: 2.2rem; }
-    .dl-when__item { text-align: center; padding: 0.3rem 0; }
-    .dl-when__label { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); display: block; margin-bottom: 0.2rem; }
-    .dl-when__value { font-family: var(--font-mono); font-size: 1.05rem; color: var(--color-white); }
-
-    .dl-steps { display: grid; gap: 1.2rem; margin-top: 2.5rem; }
-    @media (min-width: 800px) { .dl-steps { grid-template-columns: repeat(3, 1fr); } }
-    .dl-step { background: var(--color-white); border-radius: var(--radius); padding: 1.6rem 1.5rem; border-top: 3px solid var(--color-accent); }
-    .dl-step__num { font-family: var(--font-mono); color: var(--color-accent); font-size: 0.8rem; letter-spacing: 0.08em; margin-bottom: 0.6rem; }
-    .dl-step h3 { font-family: var(--font-title); font-size: 1.15rem; color: var(--color-primary); margin-bottom: 0.6rem; line-height: 1.3; }
-    .dl-step p { color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.55; }
-
-    .dl-proof { max-width: 760px; margin: 0 auto; }
-    .dl-proof__quote { font-family: var(--font-title); font-size: clamp(1.3rem, 3vw, 1.75rem); line-height: 1.4; color: var(--color-primary); border-left: 3px solid var(--color-accent); padding-left: 1.6rem; margin-bottom: 1.6rem; }
-    .dl-proof__body { color: var(--color-text-muted); font-size: 1rem; line-height: 1.65; }
-    .dl-numbers { display: grid; gap: 1rem; margin-top: 2.2rem; grid-template-columns: repeat(2, 1fr); }
-    @media (min-width: 760px) { .dl-numbers { grid-template-columns: repeat(4, 1fr); } }
-    .dl-number { background: var(--color-white); border-radius: var(--radius); padding: 1.3rem 0.9rem; text-align: center; }
-    .dl-number__val { font-family: var(--font-mono); font-size: 1.7rem; color: var(--color-primary); display: block; margin-bottom: 0.3rem; }
-    .dl-number__lab { font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.4; }
-    .dl-disclaimer { font-size: 0.82rem; color: var(--color-text-muted); line-height: 1.55; margin-top: 1.4rem; font-style: italic; }
-
-    .dl-form-wrap { max-width: 540px; margin: 2rem auto 0; background: var(--color-white); border-radius: var(--radius); padding: 2rem 1.8rem; }
-    .dl-form-note { font-size: 0.85rem; color: var(--color-text-muted); text-align: center; margin-top: 1rem; line-height: 1.5; }
-
-    .dl-who { max-width: 760px; margin: 0 auto; display: grid; gap: 2rem; align-items: start; }
-    @media (min-width: 760px) { .dl-who { grid-template-columns: 1fr 1.6fr; } }
-    .dl-who img { width: 100%; border-radius: var(--radius); display: block; }
-
-    .dl-faq { max-width: 720px; margin: 0 auto; }
-    .dl-faq__item { border-bottom: 1px solid rgba(27,43,94,0.12); padding: 1.3rem 0; }
-    .dl-faq__item h3 { font-family: var(--font-title); font-size: 1.05rem; color: var(--color-primary); margin-bottom: 0.5rem; }
-    .dl-faq__item p { color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      background:var(--color-dark); color:var(--color-light);
+      font-family:var(--font-body); line-height:1.6;
+      min-height:100vh; display:flex; align-items:center; justify-content:center;
+      padding:2rem; text-align:center;
+    }
+    .box{max-width:560px}
+    h1{font-family:var(--font-title); font-size:clamp(1.6rem,4vw,2.3rem); line-height:1.25; margin-bottom:1.2rem}
+    p{margin-bottom:1.6rem; opacity:.85}
+    a.btn{
+      display:inline-block; background:var(--color-accent); color:var(--color-dark);
+      text-decoration:none; font-weight:500; padding:0.9rem 1.8rem; border-radius:var(--radius);
+    }
+    .small{font-size:.85rem; opacity:.6; margin-top:1.6rem; margin-bottom:0}
   </style>
 </head>
 <body>
-
-  <nav class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="index.html" class="nav__logo">
-        <img src="Logo Network School (1).png" alt="Scuola di Network" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <span class="nav__logo-text" style="display:none">Scuola di Network</span>
-      </a>
-    </div>
-  </nav>
-
-  <!-- ============================================================
-       HERO — il gancio è la storia dei "troppi lead"
-  ============================================================ -->
-  <header class="dl-hero">
-    <div class="container">
-      <div class="dl-hero__grid">
-      <div class="dl-hero__text">
-        <p class="dl-hero__eyebrow">Diretta gratuita · posti limitati</p>
-
-        <h1 class="dl-hero__headline">
-          Ha dovuto <em>spegnere</em> la campagna:<br>aveva troppi contatti.
-        </h1>
-
-        <p class="dl-hero__sub">
-          Non è una battuta. Un networker che ho seguito ha generato più contatti di
-          quanti riuscisse a chiamarne, e ha dovuto fermare tutto.
-          Mercoledì 23 settembre ti mostro come si arriva ad avere quel problema —
-          e come si gestisce.
-        </p>
-
-        <div class="dl-when">
-          <div class="dl-when__item">
-            <span class="dl-when__label">Quando</span>
-            <span class="dl-when__value">Mer 23 settembre</span>
-          </div>
-          <div class="dl-when__item">
-            <span class="dl-when__label">Ora</span>
-            <span class="dl-when__value">21:00</span>
-          </div>
-          <div class="dl-when__item">
-            <span class="dl-when__label">Durata</span>
-            <span class="dl-when__value">1 ora</span>
-          </div>
-        </div>
-
-        <div>
-          <a href="#iscriviti" class="btn btn--gold btn--lg">Prenota il tuo posto</a>
-        </div>
-      </div>
-
-      <div class="dl-hero__photo">
-        <img src="Progetto senza titolo (8).png" alt="Tito Maianti">
-      </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- ============================================================
-       COSA VEDRAI
-  ============================================================ -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="section__header section__header--center">
-        <p class="section__eyebrow section__eyebrow--gold">Cosa succede in quell'ora</p>
-        <h2 class="section__title">Non ti spiego come si fa. Lo faccio davanti a te.</h2>
-        <p class="section__sub">
-          Schermo condiviso, dall'inizio alla fine. Parto da un foglio bianco e chiudo
-          con una campagna pubblicata. La campagna è la mia, vera, con i miei soldi dentro.
-        </p>
-      </div>
-
-      <div class="dl-steps">
-        <div class="dl-step">
-          <p class="dl-step__num">01</p>
-          <h3>Il copy, in 4 blocchi</h3>
-          <p>
-            Aggancio, qualificazione, prova, chiamata all'azione. Li riempio uno per uno
-            spiegando perché ogni riga sta lì. È lo stesso schema che uso con i networker
-            che seguo.
-          </p>
-        </div>
-        <div class="dl-step">
-          <p class="dl-step__num">02</p>
-          <h3>Immagine e video con l'AI</h3>
-          <p>
-            Genero la creatività dal vivo, in pochi minuti. Poi ti faccio vedere anche
-            l'alternativa: la stessa cosa girata col telefono in 30 secondi. Decidi tu
-            quale ti somiglia di più.
-          </p>
-        </div>
-        <div class="dl-step">
-          <p class="dl-step__num">03</p>
-          <h3>La campagna, fino a "Pubblica"</h3>
-          <p>
-            Gestore inserzioni, modulo contatti, pubblico, budget. Nessun passaggio
-            saltato e nessuna schermata nascosta — anche quelle dove è facile
-            sbagliare e bruciare budget.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       LA PROVA
-       ⚠️ NUMERI DA COMPLETARE — vedi commento sotto
-  ============================================================ -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="dl-proof">
-        <p class="section__eyebrow section__eyebrow--gold">Perché dovresti ascoltarmi</p>
-
-        <blockquote class="dl-proof__quote">
-          «Quattro networker, quattro sessioni. Alla fine sapevano lanciare una campagna
-          da soli. Uno ha generato così tanti contatti da doversi fermare.»
-        </blockquote>
-
-        <p class="dl-proof__body">
-          Non insegno teoria presa dai libri. Sto seguendo un gruppo di networker veri,
-          settimana dopo settimana, sulle loro campagne e con i loro soldi.
-          Uno di loro, mettendo <strong>10€ al giorno</strong>, ha iniziato a ricevere
-          otto contatti al giorno a un euro l'uno — e a chiuderne in media
-          uno al giorno. Altri hanno accettato l'invito alla riunione del mercoledì
-          del suo gruppo. Poi si è fermato: non riusciva più a richiamarli tutti.
-        </p>
-
-        <div class="dl-numbers">
-          <div class="dl-number">
-            <span class="dl-number__val">10€</span>
-            <span class="dl-number__lab">di budget al giorno</span>
-          </div>
-          <div class="dl-number">
-            <span class="dl-number__val">8</span>
-            <span class="dl-number__lab">contatti al giorno</span>
-          </div>
-          <div class="dl-number">
-            <span class="dl-number__val">1€</span>
-            <span class="dl-number__lab">costo per contatto</span>
-          </div>
-          <div class="dl-number">
-            <span class="dl-number__val">1</span>
-            <span class="dl-number__lab">vendita al giorno, in media</span>
-          </div>
-        </div>
-
-        <p class="dl-disclaimer">
-          Sono i numeri di una persona sola, nel suo mercato e in un periodo preciso.
-          Non sono una promessa di quello che otterrai tu: dipende dal tuo prodotto,
-          dalla tua zona e soprattutto da come lavori i contatti una volta arrivati.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       ISCRIZIONE
-  ============================================================ -->
-  <section class="section section--dark" id="iscriviti">
-    <div class="container">
-      <div class="section__header section__header--center">
-        <p class="section__eyebrow section__eyebrow--gold">Prenota il posto</p>
-        <h2 class="section__title">Mercoledì 23 settembre, ore 21</h2>
-        <p class="section__sub">
-          Lascia nome ed email: ti mando il link e un promemoria il giorno prima.
-          La diretta si tiene dentro la community, quindi nell'email di conferma
-          trovi anche come entrare.
-        </p>
-      </div>
-
-      <div class="dl-form-wrap">
-        <!-- Form MailerLite "Diretta 23 settembre" (creato 2026-07-29).
-             Gruppo dedicato "Diretta 23 settembre", opt-in singolo,
-             redirect a grazie-diretta.html. Non modificare i campi a mano:
-             si gestiscono dal builder MailerLite. -->
-        <div class="ml-embedded" data-form="nNu1Yl"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       CHI SONO
-  ============================================================ -->
-  <section class="section section--light">
-    <div class="container">
-      <div class="dl-who">
-        <div>
-          <!-- ⚠️ TITO: metti qui una tua foto vera (niente stock, da brand.md) -->
-          <img src="Progetto senza titolo (7).png" alt="Tito Maianti" onerror="this.style.display='none'">
-        </div>
-        <div>
-          <p class="section__eyebrow section__eyebrow--gold">Chi ti parla</p>
-          <h2 class="section__title" style="font-size:1.6rem;">Tito Maianti</h2>
-          <p style="color:var(--color-text-muted); line-height:1.65;">
-            Aiuto i networker a smettere di dipendere dalla lista di amici e parenti,
-            costruendo un sistema che porta contatti ogni giorno.
-            Non vendo formule: mi siedo accanto a te e lavoriamo sulla tua campagna,
-            finché non gira da sola.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FAQ
-  ============================================================ -->
-  <section class="section section--cream">
-    <div class="container">
-      <div class="section__header section__header--center">
-        <h2 class="section__title">Prima che ti iscrivi</h2>
-      </div>
-
-      <div class="dl-faq">
-        <div class="dl-faq__item">
-          <h3>È davvero gratis?</h3>
-          <p>Sì. Non c'è nessun costo per partecipare e non ti chiedo la carta.</p>
-        </div>
-        <div class="dl-faq__item">
-          <h3>Devo già saper usare Facebook per le inserzioni?</h3>
-          <p>
-            No. Parto dall'inizio e mostro ogni schermata. Se hai già lanciato campagne,
-            la parte sulla creatività con l'AI ti servirà comunque.
-          </p>
-        </div>
-        <div class="dl-faq__item">
-          <h3>Serve un budget pubblicitario per iniziare?</h3>
-          <p>
-            Per assistere no. Per lanciare la tua prima campagna bastano 5-10€ al giorno:
-            in diretta ti spiego perché non ha senso partire con di più.
-          </p>
-        </div>
-        <div class="dl-faq__item">
-          <h3>Se quella sera non posso esserci?</h3>
-          <p>
-            Iscriviti lo stesso: registro tutto e mando la registrazione a chi si è iscritto.
-            Ma se puoi, vieni dal vivo — nell'ultima parte rispondo alle domande.
-          </p>
-        </div>
-        <div class="dl-faq__item">
-          <h3>Devo entrare nella community?</h3>
-          <p>
-            Sì, la diretta si tiene lì ed è gratuita. Nell'email di conferma trovi il link
-            per entrare: bastano un paio di minuti.
-          </p>
-        </div>
-        <div class="dl-faq__item">
-          <h3>Mi venderai qualcosa?</h3>
-          <p>
-            Alla fine ti racconto come si può proseguire insieme, per chi vuole.
-            L'ora di diretta però è piena di sostanza a prescindere: se prendi solo quella,
-            va benissimo così.
-          </p>
-        </div>
-      </div>
-
-      <div style="text-align:center; margin-top:2.5rem;">
-        <a href="#iscriviti" class="btn btn--gold btn--lg">Prenota il tuo posto</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer class="footer">
-    <div class="footer__bottom">
-      <div class="container footer__bottom-inner">
-        <p>&copy; 2026 Scuola di Network — Tito Maianti. Tutti i diritti riservati.</p>
-        <p>
-          P.IVA 04544730981 — Via A. Regosa 11, 25024 Leno (BS) —
-          <a href="mailto:tito@scuoladinetwork.com">tito@scuoladinetwork.com</a> —
-          <a href="tel:+393208785472">+39 320 878 5472</a>
-        </p>
-        <p>
-          <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp;
-          <button type="button" class="cookie-manage" data-cookie="manage">Gestisci cookie</button>
-        </p>
-      </div>
-
-      <!-- ============================================================
-           DISCLAIMER LEGALE
-           Obbligatorio di fatto quando si fa pubblicità su Meta e si citano
-           risultati. Va tenuto su tutte le pagine che ricevono traffico a pagamento.
-      ============================================================ -->
-      <div class="container legal-disclaimer">
-        <p>
-          Questo sito non fa parte del sito Facebook o di Meta Platforms, Inc.
-          Non è in alcun modo approvato, sponsorizzato o amministrato da Meta.
-          FACEBOOK e INSTAGRAM sono marchi registrati di Meta Platforms, Inc.
-        </p>
-        <p>
-          I risultati citati si riferiscono a casi specifici e non costituiscono
-          una garanzia. Ogni risultato dipende dal prodotto, dal mercato di
-          riferimento, dal budget investito e dall'impegno della singola persona.
-          Non viene promesso né garantito alcun guadagno.
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ============================================================
-       COOKIE BANNER (GDPR)
-  ============================================================ -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Consenso cookie">
-    <p class="cookie-banner__text">
-      Usiamo cookie tecnici e, previo tuo consenso, strumenti di analisi e
-      marketing (Google, Meta). Puoi accettare o rifiutare. Dettagli nella
-      <a href="privacy.html">Privacy Policy</a>.
-    </p>
-    <div class="cookie-banner__actions">
-      <button type="button" class="cookie-banner__btn cookie-banner__btn--reject" data-cookie="reject">Rifiuta</button>
-      <button type="button" class="cookie-banner__btn cookie-banner__btn--accept" data-cookie="accept">Accetta</button>
-    </div>
+  <div class="box">
+    <h1>Questa pagina non &egrave; pi&ugrave; attiva</h1>
+    <p>La diretta che annunciava &egrave; stata annullata. Quello che ci trovavi &mdash; come si costruisce una campagna Facebook Lead Ad, passo per passo &mdash; adesso vive nella community gratuita.</p>
+    <a class="btn" href="index.html">Vai al sito</a>
+    <p class="small">Ti porto io tra qualche secondo.</p>
   </div>
-
-  <script src="js/cookie-consent.js" defer></script>
-
-  <!-- MailerLite Universal -->
-  <script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2491023');
-  </script>
-  <!-- End MailerLite Universal -->
 </body>
 </html>
